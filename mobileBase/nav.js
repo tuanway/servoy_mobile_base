@@ -4,9 +4,23 @@
  * @properties={typeid:24,uuid:"AD12AFA4-3063-42B5-8E3D-E5ADBAEEDDBE"}
  */
 function goHome(event) {
-	var item = new scopes.svyNavigation.NavigationItem('homeContainer');	
+	var item = new scopes.svyNavigation.NavigationItem('homeContainer');
 	scopes.svyNavigation.open(item);
 	application.showForm('homeContainer');
+}
+
+/**
+ * @param event
+ *
+ * @properties={typeid:24,uuid:"B129AD39-98FB-41A7-9171-3652FA9F5147"}
+ */
+function goBack(event) {
+	scopes.svyNavigation.close();
+	var item = scopes.svyNavigation.getCurrentItem();
+	if (item.getFormName() == 'homeContainer') {
+		return goHome(event);
+	}
+	return gotoForm(event, item.getFormName(), item.getCustomData());
 }
 
 /**
@@ -20,5 +34,5 @@ function gotoForm(event, formName, customData) {
 	item.setCustomData(customData);
 	scopes.svyNavigation.open(item);
 	forms.nav.switchContent(formName);
-	application.showForm('nav');	
+	application.showForm('nav');
 }

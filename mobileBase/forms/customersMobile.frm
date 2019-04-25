@@ -17,6 +17,7 @@ uuid:"01FB07B6-CC18-46F1-A148-CD57DAC533AB"
 cssPosition:"60,-1,-1,40%,calc( 60% - 10px),35",
 dataProviderID:"address",
 name:"address",
+onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 text:"Address",
 typeid:4,
 uuid:"02CF12F1-EA49-449E-A473-FAE5C2EB07A0"
@@ -34,6 +35,7 @@ uuid:"0AF9FBE6-B0AA-45CF-8376-5974869D7A98"
 cssPosition:"260,-1,-1,40%,calc( 60% - 10px),35",
 dataProviderID:"contact_title",
 name:"contact_title",
+onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 text:"Contact Title",
 typeid:4,
 uuid:"0C9DEC8B-64AC-4855-B1FB-E0813CFEC557"
@@ -66,6 +68,7 @@ uuid:"1C025A9D-2855-41E4-9A15-F4044F749E12"
 cssPosition:"110,-1,-1,40%,calc( 60% - 10px),35",
 dataProviderID:"city",
 name:"city",
+onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 text:"City",
 typeid:4,
 uuid:"250D6A6D-B66A-4BF2-9655-6FF64C05BDFC"
@@ -75,6 +78,7 @@ cssPosition:"10,-1,-1,40%,calc( 60% - 10px),35",
 dataProviderID:"customer_id",
 editable:false,
 name:"customer_id",
+onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 text:"Customer ID",
 typeid:4,
 uuid:"305BD37E-6421-49B3-B20C-D1A529EFE811"
@@ -92,6 +96,7 @@ uuid:"51B607AE-6FF7-4533-812C-D3F014D4C9A0"
 cssPosition:"160,-1,-1,40%,calc( 60% - 10px),35",
 dataProviderID:"company_name",
 name:"company_name",
+onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 text:"Company Name",
 typeid:4,
 uuid:"51FFF153-E000-4BE9-938A-857C13D945CE"
@@ -100,6 +105,7 @@ uuid:"51FFF153-E000-4BE9-938A-857C13D945CE"
 cssPosition:"210,-1,-1,40%,calc( 60% - 10px),35",
 dataProviderID:"contact_name",
 name:"contact_name",
+onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 text:"Contact Name",
 typeid:4,
 uuid:"549E0D10-462C-43F9-8C2C-5288E85A2103"
@@ -117,6 +123,7 @@ uuid:"5DA07A54-DB4F-425E-B6B5-5764FE7DD01C"
 cssPosition:"410,-1,-1,40%,calc( 60% - 10px),35",
 dataProviderID:"phone",
 name:"phone",
+onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 text:"Phone",
 typeid:4,
 uuid:"712EB311-E800-490B-9359-DE9943BA5CAC"
@@ -143,6 +150,7 @@ uuid:"B36E7B25-4CF0-4087-B3E9-496D4C82980E"
 cssPosition:"360,-1,-1,40%,calc( 60% - 10px),35",
 dataProviderID:"fax",
 name:"fax",
+onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 text:"Fax",
 typeid:4,
 uuid:"DAEE4E93-2E9F-4899-90C9-A427DC364731"
@@ -160,6 +168,7 @@ uuid:"DC9CDDAE-7580-4620-868C-61F426CB5FC9"
 cssPosition:"310,-1,-1,40%,calc( 60% - 10px),35",
 dataProviderID:"country",
 name:"country",
+onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 text:"Country",
 typeid:4,
 uuid:"E4BD5244-991D-443F-B046-D114AA62ECC8"

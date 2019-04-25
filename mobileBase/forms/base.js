@@ -17,11 +17,40 @@ var validation_element;
  * @properties={typeid:24,uuid:"27A02016-1DDA-4509-894D-A225A1D1A163"}
  */
 function validate() {
-	if (validation_message != '') {		
+	if (validation_message != '') {
 		validation_element.requestFocus();
-		validation_element.addStyleClass('validate_focus')		
+		validation_element.addStyleClass('validate_focus')
 		forms.validate_popup.show(validation_message, validation_element);
+		return false;
 	}
+	return true;
+}
+
+/**
+ * @param {JSEvent} event
+ *
+ * @properties={typeid:24,uuid:"E03EF071-205A-4501-BA18-79FABE89EF1B"}
+ */
+function inputMoveNext(event) {
+	resetValidation();
+	//if validation fails, don't move to next element.
+	if (!validate()) {
+		return;
+	}
+
+	//move to next element
+	var tabseq = controller.getTabSequence();
+	var tabIndex = tabseq.indexOf(event.getElementName())
+	if (tabseq.length > 1) {
+		// If there is more than one field in the tab sequence,
+		// focus the second one and skip over readonly fields.
+		controller.focusField(tabseq[tabIndex + 1], true);
+	} else {
+		// If there is at most one field in the tab sequence, then focus
+		// whatever field is first, and don't bother to skip over readonly fields.
+		controller.focusField(null, false);
+	}
+
 }
 
 /**
@@ -49,22 +78,3 @@ function updateUI() { }
  * @properties={typeid:24,uuid:"20BB89FC-3C5C-47CE-ADAE-FF348107FE05"}
  */
 function submit() { }
-
-/**
- * Handle changed data, return false if the value should not be accepted. In NGClient you can return also a (i18n) string, instead of false, which will be shown as a tooltip.
- *
- * @param oldValue old value
- * @param newValue new value
- * @param {JSEvent} event the event that triggered the action
- *
- * @return {Boolean}
- *
- * @private
- *
- * @properties={typeid:24,uuid:"EC2C4CF0-9E8C-4A6C-B91A-6144264C1F81"}
- */
-function onElementDataChange(oldValue, newValue, event) {
-	resetValidation();
-	validate();
-	return true
-}

@@ -116,7 +116,10 @@ button:focus {
 	padding:10px;	
 }
 
-.form-control[disabled],.form-control[readonly]{
+.form-control[disabled],.form-control[readonly],
+.form-control[disabled]:active,.form-control[disabled]:focus,
+.form-control[readonly]:active,.form-control[readonly]:focus
+{
 	color:@text-color;
 	background-color:@inactive-color;
 }

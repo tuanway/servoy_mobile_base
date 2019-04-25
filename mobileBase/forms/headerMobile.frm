@@ -28,7 +28,7 @@ uuid:"E3365ADD-4661-4AFA-B7FF-64A9C21047A4"
 },
 {
 cssPosition:"5,-1,-1,0,calc( 30% - 10px),30",
-onActionMethodID:"-1",
+onActionMethodID:"B129AD39-98FB-41A7-9171-3652FA9F5147",
 styleClass:"header_button",
 text:"<i class=\"fas fa-arrow-left\"><\/i> Back",
 typeid:7,
