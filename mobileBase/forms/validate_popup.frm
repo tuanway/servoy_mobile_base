@@ -3,13 +3,13 @@ useCssPosition:true",
 extendsID:"949256C2-DB35-4FED-93B4-5CC2E0643090",
 items:[
 {
-height:59,
+height:54,
 partType:5,
 typeid:19,
 uuid:"2A607B45-CF1F-4EEF-98D1-4E88C9CEDF53"
 },
 {
-cssPosition:"0,-1,-1,0,100%,100%",
+cssPosition:"0,-1,-1,0,100%,115%",
 dataProviderID:"msg",
 displayType:1,
 editable:false,
@@ -21,7 +21,7 @@ uuid:"C2E5F565-A468-45A8-A000-5216F39D0345"
 ],
 name:"validate_popup",
 scrollbars:36,
-size:"279,213",
+size:"279,48",
 transparent:false,
 typeid:3,
 uuid:"2C0F8A06-0C95-4BCE-B654-A082E02D6110"

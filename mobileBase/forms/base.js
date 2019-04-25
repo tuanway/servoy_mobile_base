@@ -59,6 +59,12 @@ function inputMoveNext(event) {
 	//move to next element
 	var tabseq = controller.getTabSequence();
 	var tabIndex = tabseq.indexOf(event.getElementName())
+	//are we at the last item?
+	if (tabseq.length == (tabIndex + 1)) {
+		//goto submit if we are on last item.
+		submit();
+		return;
+	}
 	if (tabseq.length > 1) {
 		// If there is more than one field in the tab sequence,
 		// focus the second one and skip over readonly fields.
@@ -68,7 +74,25 @@ function inputMoveNext(event) {
 		// whatever field is first, and don't bother to skip over readonly fields.
 		controller.focusField(null, false);
 	}
+}
 
+/**
+ * Handle changed data, return false if the value should not be accepted. In NGClient you can return also a (i18n) string, instead of false, which will be shown as a tooltip.
+ *
+ * @param oldValue old value
+ * @param newValue new value
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @return {Boolean}
+ *
+ * @public
+ *
+ *
+ * @properties={typeid:24,uuid:"68E6BDB3-3B11-466D-8BF6-FCFD8B901883"}
+ */
+function onDataChange(oldValue, newValue, event) {
+	inputMoveNext(event);
+	return true
 }
 
 /**
@@ -97,8 +121,11 @@ function submit() {
 	resetValidation()
 	for (var i = 0; i < elements.allnames.length; i++) {
 		var name = elements.allnames[i];
-		if (!validate(name)) break;
+		if (!validate(name)) {
+			return false;
+		}
 	}
+	return true;
 }
 
 /**
