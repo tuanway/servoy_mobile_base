@@ -1,0 +1,16 @@
+customProperties:"formComponent:false,\
+useCssPosition:true",
+encapsulation:60,
+extendsID:"AF6CD783-5203-4139-8BAE-3165385F0DD7",
+items:[
+{
+height:480,
+partType:5,
+typeid:19,
+uuid:"9828FE45-1DC5-4112-9624-CB2270F3E53D"
+}
+],
+name:"homeDesktop",
+showInMenu:true,
+typeid:3,
+uuid:"53CF78D5-7FBC-40D8-893E-2E32312535C5"
