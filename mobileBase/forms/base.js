@@ -1,30 +1,48 @@
 /**
- * @type {String}
- *
- * @properties={typeid:35,uuid:"A3B4C416-7DB4-4FAB-930A-ACDF2519CF95"}
+ * @properties={typeid:35,uuid:"58D8E575-4E2F-417B-8EA2-9E7970C1CC14",variableType:-4}
  */
-var validation_message = '';
-/**
- *
- * @type {RuntimeTextField}
- *
- * @properties={typeid:35,uuid:"36A25BFD-F6EB-4B0A-8637-B2DBE3E8F025",variableType:-4}
- */
-var validation_element;
-
+var validations = { }
 /**
  * Field Validation
  * @properties={typeid:24,uuid:"27A02016-1DDA-4509-894D-A225A1D1A163"}
  */
-function validate() {
+function validate(el) {
+	/** @type {Array} */
+	var checks = validations[el];
+	if (!checks) return true;
+	var validation_message = '';
+	for (var i = 0; i < checks.length; i++) {
+
+		/** @type {{value:String,valid_value:String,message:String}} */
+		var item = checks[i];
+		//if this matches a validation check
+		if (foundset[el] == item.value) {
+			validation_message = item.message;
+			break;
+		}
+
+		//if this item doesn't match a specific validation value
+		if (item.valid_value) {
+			if (foundset[el] != item.valid_value) {
+				validation_message = item.message;
+			}
+			break;
+		}
+	}
+
 	if (validation_message != '') {
-		validation_element.requestFocus();
-		validation_element.addStyleClass('validate_focus')
-		forms.validate_popup.show(validation_message, validation_element);
+		elements[el].requestFocus();
+		elements[el].addStyleClass('validate_focus')
+		forms.validate_popup.show(validation_message, elements[el]);
 		return false;
 	}
 	return true;
 }
+
+/**
+ * @properties={typeid:24,uuid:"A350AAA5-31C6-4F0B-8668-A1762945C97A"}
+ */
+function setupValidators() { }
 
 /**
  * @param {JSEvent} event
@@ -34,7 +52,7 @@ function validate() {
 function inputMoveNext(event) {
 	resetValidation();
 	//if validation fails, don't move to next element.
-	if (!validate()) {
+	if (!validate(event.getElementName())) {
 		return;
 	}
 
@@ -57,8 +75,6 @@ function inputMoveNext(event) {
  * @properties={typeid:24,uuid:"448D966D-D175-44F1-A8BC-B38474D2B687"}
  */
 function resetValidation() {
-	validation_message = '';
-	validation_element = null;
 	for (var i = 0; i < elements.allnames.length; i++) {
 		var name = elements.allnames[i];
 		var elem = elements[name];
@@ -78,3 +94,16 @@ function updateUI() { }
  * @properties={typeid:24,uuid:"20BB89FC-3C5C-47CE-ADAE-FF348107FE05"}
  */
 function submit() { }
+
+/**
+ * Callback method when form is (re)loaded.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @public
+ *
+ * @properties={typeid:24,uuid:"45935E75-C8B7-4A51-8FC0-9E238B2FE23A"}
+ */
+function onLoad(event) {
+	setupValidators();
+}

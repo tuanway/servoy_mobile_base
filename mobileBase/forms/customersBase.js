@@ -1,28 +1,13 @@
 //Business Logic
+
 /**
  * @override
  *
- * @properties={typeid:24,uuid:"8E0C846D-B4D8-4AE8-A953-4C5F3FA5F300"}
+ * @properties={typeid:24,uuid:"1433F1E8-7D60-4FD3-B660-E685A3BAF29B"}
  */
-function validate() {
-	//validate logic
-	if (city == '') {
-		validation_message = 'City cannot be blank.'
-		validation_element = elements['city'];
-		return _super.validate.apply(this, arguments);
+function setupValidators() {
+	validations = {
+		city: [{ value: '', message: 'City cannot be empty.' }],
+		country: [{ value: '', message: 'Country cannot be empty.' }, { valid_value: 'USA', message: 'Must be from USA.' }]
 	}
-
-	if (country == '') {
-		validation_message = 'Country cannot be blank.'
-		validation_element = elements['country'];
-		return _super.validate.apply(this, arguments);
-	}
-
-	if (country != 'USA') {
-		validation_message = 'Must be from USA.'
-		validation_element = elements['country'];
-		return _super.validate.apply(this, arguments);
-	}
-
-	return _super.validate.apply(this, arguments);
 }
