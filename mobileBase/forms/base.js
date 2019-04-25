@@ -93,7 +93,13 @@ function updateUI() { }
 /**
  * @properties={typeid:24,uuid:"20BB89FC-3C5C-47CE-ADAE-FF348107FE05"}
  */
-function submit() { }
+function submit() {
+	resetValidation()
+	for (var i = 0; i < elements.allnames.length; i++) {
+		var name = elements.allnames[i];
+		if (!validate(name)) break;
+	}
+}
 
 /**
  * Callback method when form is (re)loaded.

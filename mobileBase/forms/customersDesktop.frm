@@ -6,6 +6,7 @@ items:[
 cssPosition:"70,-1,-1,151,180,35",
 dataProviderID:"address",
 name:"address",
+onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 text:"Address",
 typeid:4,
 uuid:"0B8BCC48-40C6-4860-94E9-6EFD4A1954BD"
@@ -23,6 +24,7 @@ uuid:"1DD9672C-06AA-4A2E-9039-8AC6CB84AD61"
 cssPosition:"120,-1,-1,484,180,35",
 dataProviderID:"country",
 name:"country",
+onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 text:"Country",
 typeid:4,
 uuid:"2123F4E8-DCAB-4992-8E6F-1C4590C93A69"
@@ -40,6 +42,7 @@ uuid:"25A43155-5174-404E-878F-1A0E20B10F1F"
 cssPosition:"170,-1,-1,151,180,35",
 dataProviderID:"company_name",
 name:"company_name",
+onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 text:"Company Name",
 typeid:4,
 uuid:"3817091D-D5F8-4110-8367-A1BB66D5C229"
@@ -48,6 +51,7 @@ uuid:"3817091D-D5F8-4110-8367-A1BB66D5C229"
 cssPosition:"120,-1,-1,151,180,35",
 dataProviderID:"city",
 name:"city",
+onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 text:"City",
 typeid:4,
 uuid:"59B414FD-361D-44F7-AA50-D803714EB56E"
@@ -74,6 +78,7 @@ uuid:"80DE4FF8-900F-48AE-87BE-CD3655646CB4"
 cssPosition:"20,-1,-1,484,180,35",
 dataProviderID:"contact_name",
 name:"contact_name",
+onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 text:"Contact Name",
 typeid:4,
 uuid:"88C400F2-BDBE-4691-822D-884DF4C9C71F"
@@ -106,6 +111,7 @@ uuid:"AC7D8D06-9C63-4B89-8734-4A9ECF56EA81"
 cssPosition:"70,-1,-1,484,180,35",
 dataProviderID:"contact_title",
 name:"contact_title",
+onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 text:"Contact Title",
 typeid:4,
 uuid:"B3FCD30D-C07E-43F8-BD0E-7FDF237F29B2"
@@ -123,6 +129,7 @@ uuid:"BD2D7848-9034-4615-B1E6-93808945AF50"
 cssPosition:"170,-1,-1,484,180,35",
 dataProviderID:"fax",
 name:"fax",
+onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 text:"Fax",
 typeid:4,
 uuid:"CA969AA3-D413-4424-8315-88F3A85141C2"
@@ -141,6 +148,7 @@ cssPosition:"20,-1,-1,151,180,35",
 dataProviderID:"customer_id",
 editable:false,
 name:"customer_id",
+onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 text:"Customer ID",
 typeid:4,
 uuid:"E9673555-74B4-4D79-9CE3-31AB0553983A"
