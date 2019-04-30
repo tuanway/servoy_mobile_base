@@ -1,7 +1,8 @@
 /**
  * @properties={typeid:35,uuid:"58D8E575-4E2F-417B-8EA2-9E7970C1CC14",variableType:-4}
  */
-var validations = { }
+var validations = { };
+
 /**
  * Field Validation
  * @properties={typeid:24,uuid:"27A02016-1DDA-4509-894D-A225A1D1A163"}

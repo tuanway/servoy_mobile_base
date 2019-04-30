@@ -1,11 +1,19 @@
 customProperties:"formComponent:false,\
 useCssPosition:true",
-extendsID:"949256C2-DB35-4FED-93B4-5CC2E0643090",
+extendsID:"72A61B78-0B48-4E98-B0EA-08028C5E7898",
 items:[
 {
 cssPosition:"5,0,-1,-1,calc( 30% - 10px),30",
-customProperties:"",
-onActionMethodID:"AD12AFA4-3063-42B5-8E3D-E5ADBAEEDDBE",
+customProperties:"methods:{\
+onActionMethodID:{\
+arguments:[\
+null,\
+\"'homeContainer'\",\
+\"'Main Menu'\"\
+]\
+}\
+}",
+onActionMethodID:"6B6A0D81-B1A1-45EA-8A16-4EC80E4ACEE1",
 styleClass:"header_button",
 text:"<i class=\"fas fa-home\"><\/i> Home",
 typeid:7,
@@ -19,6 +27,7 @@ uuid:"5903A1B4-9606-4672-B03B-32CC8E7875DD"
 },
 {
 cssPosition:"4,30%,-1,30%,calc( 40% - 20px),30",
+dataProviderID:"scopes.nav.header_title",
 name:"header_title",
 styleClass:"header_title",
 text:"Customers Header",

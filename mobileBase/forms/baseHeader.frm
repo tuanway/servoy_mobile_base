@@ -1,0 +1,15 @@
+customProperties:"formComponent:false,\
+useCssPosition:true",
+encapsulation:60,
+items:[
+{
+height:40,
+partType:5,
+typeid:19,
+uuid:"2FEF624A-C257-4515-9EAC-E1E828A56B9D"
+}
+],
+name:"baseHeader",
+showInMenu:true,
+typeid:3,
+uuid:"72A61B78-0B48-4E98-B0EA-08028C5E7898"

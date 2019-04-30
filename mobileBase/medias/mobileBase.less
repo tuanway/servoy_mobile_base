@@ -1,5 +1,5 @@
 /* Theme Variables*/
-@main-color:#4e9a06;
+@main-color:#73d216;
 @inactive-color:rgb(34, 34, 34);
 @active-color:rgb(78, 78, 78);
 @button-color-main:@main-color;
@@ -95,6 +95,7 @@ button:focus {
 	font-weight:bold;
 	font-size: @label-text-size;
 	color:@text-color!important;
+	text-align:center;
 }
 .mobile_label{
 	background-color:@main-bg-color;
@@ -179,6 +180,10 @@ button:focus {
 	border-color:#555753!important;
 }
 
+.hidden {
+	display:none;
+}
+
 /*Navigation Menu*/
 .mobile_menu_header{
 	font-weight:bold;
@@ -191,54 +196,79 @@ button:focus {
 	height:100%!important;
 }
 
+[name="main_menu"] > div [svy-form-component="model.containedForm"] {
+	width:33%!important;
+	height:33%!important;
+}
+
+[name="sub_menu"] > div{
+	overflow:auto!important;
+}
+
+
 .nav_button{
 	border:none;
+	font-weight:bold;
+	color:@text-color!important;
+	font-size:15px!important;
+	padding:10px;
+	text-align:center;
+}
+
+.nav_list_button{
+	border-bottom:2px solid gray;
 	font-weight:bold;
 	color:@text-color!important;
 	font-size:17px;
 }
 
-.nav_button:active{
+.nav_list_button::after{
+	float:right;
+	content:'\f054';
+	font-family:FontAwesome;	
+}
+
+.nav_list_button:active,.nav_button:active{
 	opacity:0.8;
 }
 
 .nav_button .fas{
-	padding-bottom:5px;
-	font-size:50px;
+	padding-bottom:10px;
+	font-size:45px;
 }
 
-.nav-orange{
-	color:rgb(254, 120, 24);
+.nav-orange .fas{
+	color:rgb(254, 120, 24)!important;
 }
 
-.nav-blue{
+.nav-blue .fas{
+	color:#3465a4;
+}
+
+.nav-teal .fas{
 	color:rgb(14, 85, 156);
 }
 
-.nav-teal{
-	color:rgb(14, 85, 156);
-}
-
-.nav-yellow{
+.nav-yellow .fas{
 	color:#fdd225;
 }
 
-.nav-neon{
+.nav-neon .fas{
 	color:#cd4bd8;
 }
 
-.nav-purple{
+.nav-purple .fas{
 	color:#5b3e8f;	
 }
 
-.nav-green{
+.nav-green .fas{
 	color:#4ed865;
 }
 
-.nav-skyblue{
+.nav-skyblue .fas{
 	color:#59c7f9;
 }
 
-.nav-gray{
+.nav-gray .fas{
 	color:rgb(180, 180, 180);
 }

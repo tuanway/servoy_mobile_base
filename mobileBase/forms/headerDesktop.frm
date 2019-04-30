@@ -1,6 +1,6 @@
 customProperties:"formComponent:false,\
 useCssPosition:true",
-extendsID:"949256C2-DB35-4FED-93B4-5CC2E0643090",
+extendsID:"72A61B78-0B48-4E98-B0EA-08028C5E7898",
 items:[
 {
 cssPosition:"3,-1,-1,339,107,30",
@@ -13,8 +13,8 @@ typeid:7,
 uuid:"1BE4B790-601E-410D-AFC7-80FF1AAD9B2E"
 },
 {
+extendsID:"2FEF624A-C257-4515-9EAC-E1E828A56B9D",
 height:40,
-partType:5,
 typeid:19,
 uuid:"2C30A006-0556-49CC-82E1-83ADDAC4B65F"
 },

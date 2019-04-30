@@ -1,5 +1,6 @@
 customProperties:"formComponent:false,\
 useCssPosition:true",
+dataSource:"mem:menu",
 extendsID:"DB5448CA-5817-4529-AAE3-B4A316724044",
 items:[
 {
