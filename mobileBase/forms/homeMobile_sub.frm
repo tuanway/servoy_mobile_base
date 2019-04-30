@@ -15,7 +15,8 @@ json:{
 containedForm:{
 item:{
 dataProviderID:"menu_display",
-onActionMethodID:"CDC766C9-4B4A-4CDD-B7D6-18B952B52723"
+onActionMethodID:"CDC766C9-4B4A-4CDD-B7D6-18B952B52723",
+styleClassExpression:"menu_color"
 },
 onrenderlabel_380:{
 
