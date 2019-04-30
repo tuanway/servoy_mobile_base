@@ -6,5 +6,5 @@
  */
 function switchContent(formName){
 	elements.content.removeAllTabs();
-	elements.content.addTab(formName)
+	elements.content.addTab(formName);
 }

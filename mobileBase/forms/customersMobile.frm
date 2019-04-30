@@ -177,7 +177,7 @@ labelFor:"contact_name",
 name:"contact_name_label",
 styleClass:"mobile_label",
 tabSeq:-2,
-text:"Contact Name",
+text:"Contact <br> Name",
 typeid:7,
 uuid:"DC9CDDAE-7580-4620-868C-61F426CB5FC9"
 },
