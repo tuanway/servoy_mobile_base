@@ -56,5 +56,13 @@ function loadSubMenu(id){
 	foundset.newRecord();foundset.menu_display = '<i class="fas fa-circle"></i> SubItem';foundset.menu_id = 'item';foundset.menu_order=3;
 	foundset.newRecord();foundset.menu_display = '<i class="fas fa-circle"></i> SubItem';foundset.menu_id = 'item';foundset.menu_order=3;
 	foundset.newRecord();foundset.menu_display = '<i class="fas fa-circle"></i> SubItem';foundset.menu_id = 'item';foundset.menu_order=3;
+	foundset.newRecord();foundset.menu_display = '<i class="fas fa-circle"></i> SubItem';foundset.menu_id = 'item';foundset.menu_order=3;
+	foundset.newRecord();foundset.menu_display = '<i class="fas fa-circle"></i> SubItem';foundset.menu_id = 'item';foundset.menu_order=3;
+	foundset.newRecord();foundset.menu_display = '<i class="fas fa-circle"></i> SubItem';foundset.menu_id = 'item';foundset.menu_order=3;
+	foundset.newRecord();foundset.menu_display = '<i class="fas fa-circle"></i> SubItem';foundset.menu_id = 'item';foundset.menu_order=3;
+	foundset.newRecord();foundset.menu_display = '<i class="fas fa-circle"></i> SubItem';foundset.menu_id = 'item';foundset.menu_order=3;
+	foundset.newRecord();foundset.menu_display = '<i class="fas fa-circle"></i> SubItem';foundset.menu_id = 'item';foundset.menu_order=3;
+	foundset.newRecord();foundset.menu_display = '<i class="fas fa-circle"></i> SubItem';foundset.menu_id = 'item';foundset.menu_order=3;
+	foundset.newRecord();foundset.menu_display = '<i class="fas fa-circle"></i> SubItem';foundset.menu_id = 'item';foundset.menu_order=3;
 	foundset.sort('menu_order asc');
 }
