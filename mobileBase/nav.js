@@ -68,8 +68,7 @@ function gotoForm(event, formName, title, customData) {
 	if (title) item.setText(title)
 	if (customData) item.setCustomData(customData);
 
-	scopes.svyNavigation.open(item);
-	application.output(formName.split('_level_')[0])
+	scopes.svyNavigation.open(item);	
 	forms.nav.switchContent(formName.split('_level_')[0]);
 	application.showForm('nav');
 }

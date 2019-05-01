@@ -110,6 +110,15 @@ function resetValidation() {
 }
 
 /**
+ * @param {JSEvent} event
+ * @properties={typeid:24,uuid:"CA85BBA6-7EA4-4677-900B-3D9388F76EB4"}
+ */
+function runValidation(event){
+	resetValidation();
+	validate(event.getElementName());
+}
+
+/**
  * Update User Interface
  * @properties={typeid:24,uuid:"43AB9D67-8882-4AD3-94E5-B7ABC6F2DA4E"}
  */
