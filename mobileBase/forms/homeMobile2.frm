@@ -41,7 +41,7 @@ typeid:47,
 uuid:"53387D61-199D-4517-A7E7-2F0E606E7DA7"
 }
 ],
-name:"homeMobile_sub",
+name:"homeMobile2",
 scrollbars:0,
 size:"262,522",
 typeid:3,

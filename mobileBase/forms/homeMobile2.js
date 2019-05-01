@@ -8,4 +8,5 @@
  */
 function selectItem(event) {
 	scopes.nav.gotoForm(event,menu_id,menu_title)
+	scopes.nav.gotoSubForm(1);
 }

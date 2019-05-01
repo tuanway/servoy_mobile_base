@@ -1,5 +1,13 @@
 customProperties:"formComponent:false",
 extendsID:"8E9ADBF9-9170-4F09-BAE3-BF401AEFA239",
+items:[
+{
+height:100,
+partType:5,
+typeid:19,
+uuid:"ACC877EC-AF14-4D7E-B880-99A0FFD6DC84"
+}
+],
 name:"ordersDesktop",
 typeid:3,
 uuid:"E6A8DDE7-FFFD-4E01-B74F-EF8A20AD73E6"

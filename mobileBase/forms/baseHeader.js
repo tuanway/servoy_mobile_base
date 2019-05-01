@@ -7,7 +7,7 @@ var header_title = '';
 
 /**
  * @param title
- * @public 
+ * @public
  * @properties={typeid:24,uuid:"27D6D370-FE9C-40A8-91C6-F911C111BE88"}
  */
 function setTitle(title) {

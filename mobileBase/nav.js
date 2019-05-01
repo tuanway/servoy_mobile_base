@@ -12,11 +12,40 @@ var header_title = '';
  *
  * @properties={typeid:24,uuid:"B129AD39-98FB-41A7-9171-3652FA9F5147"}
  */
-function goBack(event) {
+function goBack(event) {	
 	scopes.svyNavigation.close();
 	var item = scopes.svyNavigation.getCurrentItem();
-	return gotoForm(event, item.getFormName(), item.getText(), item.getCustomData());
+	var n = item.getFormName();	
+	//check to see what level we are at and move down a level if needed.
+	if (n.indexOf('_level_') != -1) {
+		var level = n.split('_level_')[1];
+		if (level > 1) {
+			return gotoSubForm(level);
+		} else {
+			//navigate back one more time if on level 1
+			scopes.svyNavigation.close();
+			item = scopes.svyNavigation.getCurrentItem();
+		}
+	}
+	return gotoSubForm(1);
 }
+
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"3ED29236-B0CF-495F-BA4A-ECE94B8B6134"}
+ */
+function goHome(event) {
+	scopes.svyNavigation.getNavigationItems().forEach(function(i) {
+		scopes.svyNavigation.close(i);
+	})
+	scopes.nav.gotoForm(event, 'homeContainer', 'Main Menu');
+	gotoSubForm(1);
+}
+
 
 /**
  * @param {JSEvent} event
@@ -26,26 +55,57 @@ function goBack(event) {
  * @properties={typeid:24,uuid:"6B6A0D81-B1A1-45EA-8A16-4EC80E4ACEE1"}
  */
 function gotoForm(event, formName, title, customData) {
-	var item = new scopes.svyNavigation.NavigationItem(formName);
-	item.setCustomData(customData);
-	item.setText(title)
+	//check if item exists
+	var item;
+	scopes.svyNavigation.getNavigationItems().forEach(function(i) {
+		if (i.getFormName() == formName) {
+			item = i;
+		}
+	})
+	if (!item) {
+		item = new scopes.svyNavigation.NavigationItem(formName);
+	}
+	if (title) item.setText(title)
+	if (customData) item.setCustomData(customData);
+
 	scopes.svyNavigation.open(item);
-	forms.nav.switchContent(formName);
+	application.output(formName.split('_level_')[0])
+	forms.nav.switchContent(formName.split('_level_')[0]);
 	application.showForm('nav');
+}
 
-	//set the header
-	header_title = item.getText();
+/**
+ * @param {Array<String>} [elName]
+ * @properties={typeid:24,uuid:"F7FAAF6F-D4C4-4BFC-B22D-D04FB11090CA"}
+ */
+function toggleHeaderButtons(elName) {
+	//iterate through all header forms and activate/deactivate buttons
+	//by default hide all elements.
+	var fr = ['headerDesktop', 'headerMobile'];
+	fr.forEach(function(i) {
+		for (var j = 0; j < forms[i].elements.allnames.length; j++) {
+			var name = forms[i].elements.allnames[j];
+			var elem = forms[i].elements[name];
+			if (elName.indexOf(name) != -1) {
+				elem.visible = true
+			} else {
+				elem.visible = false;
+			}
+		}
+	})
+}
 
-	//if we are going back to main page:
-	if (formName == 'homeContainer') {
-		forms.homeContainer.loadMainMenu();
+/**
+ * @properties={typeid:24,uuid:"52E1B658-11B3-454A-A35B-0CC5B53EF71E"}
+ */
+function gotoSubForm(level) {
+	//first get current form
+	var f = scopes.svyNavigation.getCurrentItem().getFormName().split('_level_')[0];
+	forms[f].switchForms(level);
+	//generate navigation item for sub menu
+	var nm = f;
+	if (level != 1) {
+		nm = f + '_level_' + level
 	}
-
-	//if we are going back to subMenu
-	if (formName == 'homeMobile_sub') {
-		forms.nav.switchContent('homeContainer');
-		forms.homeContainer.loadSubMenu();
-		//close out of submenu item
-		scopes.svyNavigation.close();
-	}
+	gotoForm(null, nm, '');
 }

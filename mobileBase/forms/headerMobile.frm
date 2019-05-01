@@ -4,16 +4,8 @@ extendsID:"72A61B78-0B48-4E98-B0EA-08028C5E7898",
 items:[
 {
 cssPosition:"5,0,-1,-1,calc( 30% - 10px),30",
-customProperties:"methods:{\
-onActionMethodID:{\
-arguments:[\
-null,\
-\"'homeContainer'\",\
-\"'Main Menu'\"\
-]\
-}\
-}",
-onActionMethodID:"6B6A0D81-B1A1-45EA-8A16-4EC80E4ACEE1",
+name:"home",
+onActionMethodID:"E3C8553B-FC01-404A-82A1-686480C60C19",
 styleClass:"header_button",
 text:"<i class=\"fas fa-home\"><\/i> Home",
 typeid:7,
@@ -28,7 +20,7 @@ uuid:"5903A1B4-9606-4672-B03B-32CC8E7875DD"
 {
 cssPosition:"4,30%,-1,30%,calc( 40% - 20px),30",
 dataProviderID:"scopes.nav.header_title",
-name:"header_title",
+name:"title",
 styleClass:"header_title",
 text:"Customers Header",
 transparent:true,
@@ -37,6 +29,7 @@ uuid:"E3365ADD-4661-4AFA-B7FF-64A9C21047A4"
 },
 {
 cssPosition:"5,-1,-1,0,calc( 30% - 10px),30",
+name:"back",
 onActionMethodID:"B129AD39-98FB-41A7-9171-3652FA9F5147",
 styleClass:"header_button",
 text:"<i class=\"fas fa-arrow-left\"><\/i> Back",
