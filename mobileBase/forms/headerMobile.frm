@@ -5,7 +5,7 @@ items:[
 {
 cssPosition:"5,0,-1,-1,calc( 30% - 10px),30",
 name:"home",
-onActionMethodID:"E3C8553B-FC01-404A-82A1-686480C60C19",
+onActionMethodID:"3ED29236-B0CF-495F-BA4A-ECE94B8B6134",
 styleClass:"header_button",
 text:"<i class=\"fas fa-home\"><\/i> Home",
 typeid:7,
