@@ -1,11 +1,11 @@
 customProperties:"formComponent:false,\
 useCssPosition:true",
 encapsulation:60,
-extendsID:"AF6CD783-5203-4139-8BAE-3165385F0DD7",
+extendsID:"1AE25D83-DC49-43EB-8A95-03C1B578C260",
 items:[
 {
+extendsID:"7FA82B5D-0212-4DC8-B2CD-B5A7C684A0CD",
 height:480,
-partType:5,
 typeid:19,
 uuid:"9828FE45-1DC5-4112-9624-CB2270F3E53D"
 }
