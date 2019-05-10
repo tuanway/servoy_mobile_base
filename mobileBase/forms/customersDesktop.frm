@@ -176,6 +176,7 @@ uuid:"D05E3D58-EF88-4B24-A9CB-7876294C8557"
 {
 anchors:14,
 cssPosition:"255,-1,-1,181,calc(100% - 188px),60",
+name:"submit",
 onActionMethodID:"20BB89FC-3C5C-47CE-ADAE-FF348107FE05",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",

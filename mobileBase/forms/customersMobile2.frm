@@ -5,6 +5,7 @@ items:[
 {
 anchors:14,
 cssPosition:"469,-1,-1,10,calc(100% - 20px),60",
+name:"submit",
 onActionMethodID:"20BB89FC-3C5C-47CE-ADAE-FF348107FE05",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
