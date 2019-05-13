@@ -1,36 +1,9 @@
 /**
- * @properties={typeid:35,uuid:"58D8E575-4E2F-417B-8EA2-9E7970C1CC14",variableType:-4}
- */
-var validations = { };
-
-/**
  * Field Validation
  * @properties={typeid:24,uuid:"27A02016-1DDA-4509-894D-A225A1D1A163"}
  */
 function validate(el) {
-	/** @type {Array} */
-	var checks = validations[el];
-	if (!checks) return true;
-	var validation_message = '';
-	for (var i = 0; i < checks.length; i++) {
-
-		/** @type {{value:String,valid_value:String,message:String}} */
-		var item = checks[i];
-		//if this matches a validation check
-		if (foundset[el] == item.value) {
-			validation_message = item.message;
-			break;
-		}
-
-		//if this item doesn't match a specific validation value
-		if (item.valid_value) {
-			if (foundset[el] != item.valid_value) {
-				validation_message = item.message;
-			}
-			break;
-		}
-	}
-
+	var validation_message = validateDP(el);
 	if (validation_message != '') {
 		elements[el].requestFocus();
 		elements[el].addStyleClass('validate_focus')
@@ -41,9 +14,13 @@ function validate(el) {
 }
 
 /**
- * @properties={typeid:24,uuid:"A350AAA5-31C6-4F0B-8668-A1762945C97A"}
+ * @param {String} el
+ *
+ * @properties={typeid:24,uuid:"7E53DE57-2F8A-48DD-A1DF-26247CFD936B"}
  */
-function setupValidators() { }
+function validateDP(el) {
+	return '';
+}
 
 /**
  * @param {JSEvent} event
@@ -113,7 +90,7 @@ function resetValidation() {
  * @param {JSEvent} event
  * @properties={typeid:24,uuid:"CA85BBA6-7EA4-4677-900B-3D9388F76EB4"}
  */
-function runValidation(event){
+function runValidation(event) {
 	resetValidation();
 	validate(event.getElementName());
 }
@@ -148,5 +125,5 @@ function submit() {
  * @properties={typeid:24,uuid:"45935E75-C8B7-4A51-8FC0-9E238B2FE23A"}
  */
 function onLoad(event) {
-	setupValidators();
+	
 }

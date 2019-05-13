@@ -13,3 +13,15 @@ var header_title = '';
 function setTitle(title) {
 	header_title = title;
 }
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @public 
+ *
+ * @properties={typeid:24,uuid:"F2860AB6-2263-483D-9ADD-AA742AC9F681"}
+ */
+function headerTitleClick(event) {
+	// TODO Auto-generated method stub
+}

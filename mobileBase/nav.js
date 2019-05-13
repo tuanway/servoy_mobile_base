@@ -108,3 +108,66 @@ function gotoSubForm(level) {
 	}
 	gotoForm(null, nm, '');
 }
+
+
+/**
+ * @param {String} id
+ * @param {String} title
+ * @param {String} icon
+ * @param {String} color
+ * @param {Number} order
+ * @param {String} [parent]
+ * @properties={typeid:24,uuid:"070BD1DA-A9B0-407B-8BA4-43AA1D573141"}
+ * @AllowToRunInFind
+ */
+function addMenuItem(id,title, icon, color, order, parent) {
+	var f = datasources.mem.menu.getFoundSet();
+	
+	//check if menu item exists already
+	f.find();
+	f.menu_id = id;
+	f.search();
+	if (f.getSize()==0) {
+		if (f.newRecord()){
+			f.menu_id = id;
+			f.menu_display = '<i class="fas '+icon+'"></i> <br> '+title;
+			f.menu_color = color;
+			f.menu_order = order;
+			f.menu_parent = parent;
+			if (parent) {
+				f.menu_display = '<i class="fas '+icon+'"></i> '+title;
+			}
+			databaseManager.saveData(f);
+		}		
+	} else {
+		throw 'Menu item already exists';
+	}
+	
+}
+
+
+/**
+ * @properties={typeid:24,uuid:"9745B48F-395D-4EED-86A6-E05D97F8FC4F"}
+ */
+function createMenuData(){
+	var f = datasources.mem.menu.getFoundSet();		
+	f.deleteAllRecords();
+	
+	//Add Main Menu
+	addMenuItem('customers','Receiving','fa-truck-loading','nav-orange',1);
+	addMenuItem('shipping','Shipping','fa-shipping-fast','nav-green',3);
+	addMenuItem('kitting','Kitting','fa-box-open','nav-yellow',3);
+	addMenuItem('inventory','Inventory','fa-boxes','nav-green',3);
+	addMenuItem('labels','Labels','fa-tags','nav-neon',3);
+	addMenuItem('picking','Picking','fa-dolly-flatbed','nav-orange',3);
+	addMenuItem('rma','RMA','fa-heart-broken','nav-neon',3);
+	addMenuItem('move','Move','fa-dolly','nav-skyblue',3);
+	addMenuItem('settings','Settings','fa-cog','nav-gray',3);
+	
+	
+	//Add Sub Menu
+	addMenuItem('customersContainer','Customers','fa-circle','nav-orange',1,'customers');
+	addMenuItem('ordersContainer','Orders','fa-circle','nav-yellow',2,'customers');		
+	
+	databaseManager.saveData(f);
+}

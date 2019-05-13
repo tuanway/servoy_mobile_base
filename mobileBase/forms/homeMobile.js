@@ -24,5 +24,5 @@ function selectMenuItem(event) {
  */
 function onShow(firstShow, event) {
 	loadMainMenu();
-	scopes.nav.toggleHeaderButtons(['home']);
+	scopes.nav.toggleHeaderButtons(['title','home']);
 }

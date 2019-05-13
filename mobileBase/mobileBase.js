@@ -10,5 +10,6 @@
  * @properties={typeid:24,uuid:"94688463-21FB-40AF-9996-EB8C76E592E8"}
  */
 function onSolutionOpen(arg, queryParams) {
-	plugins.ngclientutils.setViewportMetaForMobileAwareSites(plugins.ngclientutils.VIEWPORT_MOBILE_DENY_ZOOM)	
+	plugins.ngclientutils.setViewportMetaForMobileAwareSites(plugins.ngclientutils.VIEWPORT_MOBILE_DENY_ZOOM);
+	scopes.nav.createMenuData();
 }

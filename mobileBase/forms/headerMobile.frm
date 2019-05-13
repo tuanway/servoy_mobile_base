@@ -21,6 +21,7 @@ uuid:"5903A1B4-9606-4672-B03B-32CC8E7875DD"
 cssPosition:"4,30%,-1,30%,calc( 40% - 20px),30",
 dataProviderID:"scopes.nav.header_title",
 name:"title",
+onActionMethodID:"F2860AB6-2263-483D-9ADD-AA742AC9F681",
 styleClass:"header_title",
 text:"Customers Header",
 transparent:true,

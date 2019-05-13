@@ -1,6 +1,13 @@
-customProperties:"formComponent:false",
+customProperties:"formComponent:false,\
+methods:{\
+onShowMethodID:{\
+arguments:null,\
+parameters:null\
+}\
+}",
 dataSource:"db:/example_data/orders",
 extendsID:"949256C2-DB35-4FED-93B4-5CC2E0643090",
 name:"ordersBase",
+onShowMethodID:"3679B297-E75C-4C4F-A82D-A07D2AE888BE",
 typeid:3,
 uuid:"8E9ADBF9-9170-4F09-BAE3-BF401AEFA239"

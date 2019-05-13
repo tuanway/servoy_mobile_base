@@ -1,15 +1,32 @@
 //Business Logic
 
 /**
+ * @param {String} el
  * @override
  *
- * @properties={typeid:24,uuid:"1433F1E8-7D60-4FD3-B660-E685A3BAF29B"}
+ * @properties={typeid:24,uuid:"A4091C46-9FE4-48FE-BDAD-F0C980EE4D8E"}
  */
-function setupValidators() {
-	validations = {
-		city: [{ value: '', message: 'City cannot be empty.' }],
-		country: [{ value: '', message: 'Country cannot be empty.' }, { valid_value: 'USA', message: 'Must be from USA.' }]
+function validateDP(el) {
+	var dp = this[el];
+	switch (el) {
+	case 'city':
+		if (!dp || dp == '') {
+			return 'City cannot be empty.'
+		}
+		break;
+	case 'country':
+		if (!dp || dp == '') {
+			return 'Country cannot be empty.'
+		}
+		if (dp != 'USA') {
+			return 'Must be from USA.'
+		}
+		break;
+	default:
+		break;
 	}
+
+	return _super.validateDP(el);
 }
 
 /**
@@ -21,4 +38,18 @@ function submit() {
 	if (_super.submit.apply(this, arguments)) {
 		plugins.dialogs.showInfoDialog('INFO', 'submission completed');
 	}
+}
+
+/**
+ * Callback method for when form is shown.
+ *
+ * @param {Boolean} firstShow form is shown first time after load
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @private
+ *
+ * @properties={typeid:24,uuid:"4A3127F5-4F62-45BA-92FE-968012614145"}
+ */
+function onShow(firstShow, event) {
+	scopes.nav.header_title = 'Customers';
 }
