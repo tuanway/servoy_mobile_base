@@ -12,5 +12,31 @@
  */
 function onSolutionOpen(arg, queryParams) {
 	//setup main/sub menu
-	scopes.nav.createMenuData();
+	createMenuData();
+}
+
+/**
+ * @properties={typeid:24,uuid:"D868C488-2BD8-401E-99D8-C4CC46063B21"}
+ */
+function createMenuData(){
+	var f = datasources.mem.menu.getFoundSet();		
+	f.deleteAllRecords();
+	
+	//Add Main Menu
+	scopes.nav.addMenuItem('customers','Receiving','fa-truck-loading','nav-orange',1);
+	scopes.nav.addMenuItem('shipping','Shipping','fa-shipping-fast','nav-green',3);
+	scopes.nav.addMenuItem('kitting','Kitting','fa-box-open','nav-yellow',3);
+	scopes.nav.addMenuItem('inventory','Inventory','fa-boxes','nav-green',3);
+	scopes.nav.addMenuItem('labels','Labels','fa-tags','nav-neon',3);
+	scopes.nav.addMenuItem('picking','Picking','fa-dolly-flatbed','nav-orange',3);
+	scopes.nav.addMenuItem('rma','RMA','fa-heart-broken','nav-neon',3);
+	scopes.nav.addMenuItem('move','Move','fa-dolly','nav-skyblue',3);
+	scopes.nav.addMenuItem('settings','Settings','fa-cog','nav-gray',3);
+	
+	
+	//Add Sub Menu
+	scopes.nav.addMenuItem('customersContainer','Customers','fa-circle','nav-orange',1,'customers');
+	scopes.nav.addMenuItem('ordersContainer','Orders','fa-circle','nav-yellow',2,'customers');		
+	
+	databaseManager.saveData(f);
 }
