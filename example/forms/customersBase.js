@@ -53,3 +53,14 @@ function submit() {
 function onShow(firstShow, event) {
 	scopes.nav.header_title = 'Customers';
 }
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @public 
+ *
+ * @properties={typeid:24,uuid:"4821B0DA-55EE-43D6-B6A2-DB539E1EA8A9"}
+ */
+function onAction$selectCustomer(event) {
+}
