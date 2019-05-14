@@ -17,14 +17,6 @@ function loadMainMenu() {
  * @AllowToRunInFind
  */
 function loadSubMenu(id) {
-	//get title
-	foundset.find();
-	foundset.menu_id = id;
-	foundset.search();
-	if (foundset.getSelectedRecord()) {
-		scopes.nav.header_title = foundset.getSelectedRecord().menu_title;
-	}
-
 	foundset.find();
 	foundset.menu_parent = id;
 	foundset.search();

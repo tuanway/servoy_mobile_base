@@ -8,6 +8,6 @@ parameters:null\
 dataSource:"db:/example_data/orders",
 extendsID:"949256C2-DB35-4FED-93B4-5CC2E0643090",
 name:"ordersBase",
-onShowMethodID:"3679B297-E75C-4C4F-A82D-A07D2AE888BE",
+onShowMethodID:"18A7FCA9-D6A1-4744-9257-72D9078D46EB",
 typeid:3,
-uuid:"8E9ADBF9-9170-4F09-BAE3-BF401AEFA239"
+uuid:"DB74DA39-4863-4978-83CF-57D8ADBB4F6C"

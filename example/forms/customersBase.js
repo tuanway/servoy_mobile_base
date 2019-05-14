@@ -4,7 +4,7 @@
  * @param {String} el
  * @override
  *
- * @properties={typeid:24,uuid:"A4091C46-9FE4-48FE-BDAD-F0C980EE4D8E"}
+ * @properties={typeid:24,uuid:"7C33C9A5-4C19-41F8-A426-C3DC5DE233BA"}
  */
 function validateDP(el) {
 	var dp = this[el];
@@ -32,7 +32,7 @@ function validateDP(el) {
 /**
  * @override
  *
- * @properties={typeid:24,uuid:"C11A825A-B1E1-4F40-81BF-9D7D6A174811"}
+ * @properties={typeid:24,uuid:"EB344882-7043-4B4F-A9BC-3EFA5B4F636D"}
  */
 function submit() {
 	if (_super.submit.apply(this, arguments)) {
@@ -48,7 +48,7 @@ function submit() {
  *
  * @private
  *
- * @properties={typeid:24,uuid:"4A3127F5-4F62-45BA-92FE-968012614145"}
+ * @properties={typeid:24,uuid:"346B14B2-CA66-4CFC-999A-84F279481A22"}
  */
 function onShow(firstShow, event) {
 	scopes.nav.header_title = 'Customers';

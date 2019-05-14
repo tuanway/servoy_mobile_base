@@ -1,21 +1,15 @@
 customProperties:"formComponent:false,\
 useCssPosition:true",
 dataSource:"db:/example_data/customers",
-extendsID:"4D4A7887-7159-425B-B136-185D3AA4E1CC",
+extendsID:"D1F73E24-71C9-45E8-852E-873FE4BCBF2C",
 items:[
-{
-height:480,
-partType:5,
-typeid:19,
-uuid:"039F78EB-F687-471A-98D2-4D65C04CE2C5"
-},
 {
 cssPosition:"10,-1,-1,5,calc(100% - 10px),calc(100% - 15px)",
 json:{
 containedForm:{
 item:{
 dataProviderID:"customer_id",
-onActionMethodID:"7C20B1F9-B9A7-4AB8-A30F-0C9A8BC302DE"
+onActionMethodID:"7D5E0344-C2F4-489D-A897-E99906AC47B3"
 },
 onrenderlabel_380:{
 
@@ -37,10 +31,16 @@ responsivePageSize:10000
 name:"sub_menu",
 typeName:"servoyextra-listformcomponent",
 typeid:47,
-uuid:"54528444-6FA5-45DB-A310-CAC230FB23B4"
+uuid:"4F8E4815-19C2-41FF-8FF1-35CAED67A912"
+},
+{
+height:480,
+partType:5,
+typeid:19,
+uuid:"5240C8FA-04FE-495B-9C4C-DB52A0DBE79B"
 }
 ],
 name:"customersMobile",
 size:"320,480",
 typeid:3,
-uuid:"ECCB92E7-E81C-4960-8679-25FA27EA8EF7"
+uuid:"D3C1AE78-EF5F-408F-B881-075546E270E7"

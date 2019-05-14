@@ -3,7 +3,7 @@
  *
  * @private
  *
- * @properties={typeid:24,uuid:"7C20B1F9-B9A7-4AB8-A30F-0C9A8BC302DE"}
+ * @properties={typeid:24,uuid:"7D5E0344-C2F4-489D-A897-E99906AC47B3"}
  */
 function openDetailForm(event) {
 	scopes.nav.gotoSubForm(2);
