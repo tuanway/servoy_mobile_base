@@ -11,8 +11,12 @@
  * @properties={typeid:24,uuid:"E86963EC-7A7E-40F3-81D2-FDAD156F2721"}
  */
 function onSolutionOpen(arg, queryParams) {
+	//initialize mobile base
+	scopes.mobileBase.onSolutionOpen(arg,queryParams);
+	
 	//setup main/sub menu
 	createMenuData();
+	
 }
 
 /**
@@ -23,7 +27,7 @@ function createMenuData(){
 	f.deleteAllRecords();
 	
 	//Add Main Menu
-	scopes.nav.addMenuItem('customers','Receiving','fa-truck-loading','nav-orange',1);
+	scopes.nav.addMenuItem('customers','Receiving','fa-truck-loading','nav-neon',1);
 	scopes.nav.addMenuItem('shipping','Shipping','fa-shipping-fast','nav-green',3);
 	scopes.nav.addMenuItem('kitting','Kitting','fa-box-open','nav-yellow',3);
 	scopes.nav.addMenuItem('inventory','Inventory','fa-boxes','nav-green',3);
@@ -34,9 +38,12 @@ function createMenuData(){
 	scopes.nav.addMenuItem('settings','Settings','fa-cog','nav-gray',3);
 	
 	
-	//Add Sub Menu
-	scopes.nav.addMenuItem('customersContainer','Customers','fa-circle','nav-orange',1,'customers');
-	scopes.nav.addMenuItem('ordersContainer','Orders','fa-circle','nav-yellow',2,'customers');		
+	//Add Sub Menu for customers
+	scopes.nav.addMenuItem('customersContainer','Customers','fa-circle','nav-skyblue',1,'customers');
+	scopes.nav.addMenuItem('ordersContainer','Orders','fa-circle','nav-yellow',2,'customers');	
+	
+	//Add Sub Menu for shipping
+	scopes.nav.addMenuItem('Test','Test','fa-circle','nav-skyblue',1,'shipping');	
 	
 	databaseManager.saveData(f);
 }
