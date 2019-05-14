@@ -4,6 +4,9 @@ extendsID:"D1F73E24-71C9-45E8-852E-873FE4BCBF2C",
 items:[
 {
 cssPosition:"310,-1,-1,40%,calc( 60% - 10px),35",
+customProperties:"attributes:{\
+autocomplete:\"off\"\
+}",
 dataProviderID:"country",
 name:"country",
 onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
@@ -64,6 +67,9 @@ uuid:"3518FBFC-76B9-4C60-BDC7-13AEE58F8A29"
 },
 {
 cssPosition:"410,-1,-1,40%,calc( 60% - 10px),35",
+customProperties:"attributes:{\
+autocomplete:\"off\"\
+}",
 dataProviderID:"phone",
 name:"phone",
 onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
@@ -117,6 +123,9 @@ uuid:"598137CB-7777-46AC-AD01-DE777145D1B2"
 },
 {
 cssPosition:"360,-1,-1,40%,calc( 60% - 10px),35",
+customProperties:"attributes:{\
+autocomplete:\"off\"\
+}",
 dataProviderID:"fax",
 name:"fax",
 onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
@@ -127,6 +136,9 @@ uuid:"73B461CC-EAE2-4DE8-B3A4-0D74067F80C7"
 },
 {
 cssPosition:"10,-1,-1,40%,calc( 60% - 10px),35",
+customProperties:"attributes:{\
+autocomplete:\"off\"\
+}",
 dataProviderID:"customer_id",
 editable:false,
 name:"customer_id",
@@ -154,6 +166,9 @@ uuid:"BDE46651-C7CA-453A-9C1A-F624B2E069D5"
 },
 {
 cssPosition:"60,-1,-1,40%,calc( 60% - 10px),35",
+customProperties:"attributes:{\
+autocomplete:\"off\"\
+}",
 dataProviderID:"address",
 name:"address",
 onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
@@ -164,6 +179,9 @@ uuid:"C9CA4B5A-7328-49F2-8D88-586AB3F01D45"
 },
 {
 cssPosition:"210,-1,-1,40%,calc( 60% - 10px),35",
+customProperties:"attributes:{\
+autocomplete:\"off\"\
+}",
 dataProviderID:"contact_name",
 name:"contact_name",
 onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
@@ -174,6 +192,9 @@ uuid:"D5EBD074-61BD-48C0-AC2B-F2EDD1BCF9F6"
 },
 {
 cssPosition:"260,-1,-1,40%,calc( 60% - 10px),35",
+customProperties:"attributes:{\
+autocomplete:\"off\"\
+}",
 dataProviderID:"contact_title",
 name:"contact_title",
 onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
@@ -184,6 +205,9 @@ uuid:"E8DC3818-0523-41A9-B6A1-6B760F97A531"
 },
 {
 cssPosition:"110,-1,-1,40%,calc( 60% - 10px),35",
+customProperties:"attributes:{\
+autocomplete:\"off\"\
+}",
 dataProviderID:"city",
 name:"city",
 onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
@@ -194,6 +218,9 @@ uuid:"FE946DFD-3CF0-459B-83F2-573302FCA421"
 },
 {
 cssPosition:"160,-1,-1,40%,calc( 60% - 10px),35",
+customProperties:"attributes:{\
+autocomplete:\"off\"\
+}",
 dataProviderID:"company_name",
 name:"company_name",
 onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",

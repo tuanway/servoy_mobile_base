@@ -27,9 +27,9 @@ function createMenuData(){
 	f.deleteAllRecords();
 	
 	//Add Main Menu
-	scopes.nav.addMenuItem('customers','Receiving','fa-truck-loading','nav-neon',1);
+	scopes.nav.addMenuItem('customers','Receiving','fa-truck-loading','nav-skyblue',1);
 	scopes.nav.addMenuItem('shipping','Shipping','fa-shipping-fast','nav-green',3);
-	scopes.nav.addMenuItem('kitting','Kitting','fa-box-open','nav-yellow',3);
+	scopes.nav.addMenuItem('kitting','Kitting','fa-box-open','nav-gray',3);
 	scopes.nav.addMenuItem('inventory','Inventory','fa-boxes','nav-green',3);
 	scopes.nav.addMenuItem('labels','Labels','fa-tags','nav-neon',3);
 	scopes.nav.addMenuItem('picking','Picking','fa-dolly-flatbed','nav-orange',3);
