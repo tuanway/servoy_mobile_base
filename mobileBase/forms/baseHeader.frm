@@ -6,10 +6,10 @@ items:[
 height:40,
 partType:5,
 typeid:19,
-uuid:"2FEF624A-C257-4515-9EAC-E1E828A56B9D"
+uuid:"EEB21330-1CE7-41B1-BA7E-73182AC64573"
 }
 ],
 name:"baseHeader",
 showInMenu:true,
 typeid:3,
-uuid:"72A61B78-0B48-4E98-B0EA-08028C5E7898"
+uuid:"DB77AD75-4BC1-4F02-AEBC-24916E01A536"

@@ -6,7 +6,7 @@
  */
 function switchContent(formName) {
 	elements.content.removeAllTabs();
-	elements.content.addTab(formName);	
+	elements.content.addTab(formName);
 }
 /**
  * @param {JSEvent} event
@@ -16,4 +16,24 @@ function switchContent(formName) {
  */
 function onLoad(event) {
 	scopes.nav.gotoForm(event, 'homeContainer', 'Main Menu');
+}
+
+/**
+ * @param formName
+ *
+ * @properties={typeid:24,uuid:"8326276D-195C-43C7-AA36-32A24006AE6F"}
+ */
+function setHeaderMobile(formName) {
+	elements.header_mobile.removeAllTabs();
+	elements.header_mobile.addTab(formName);
+}
+
+/**
+ * @param formName
+ *
+ * @properties={typeid:24,uuid:"692EBA55-9183-4112-BBE6-0E870B606955"}
+ */
+function setHeaderDesktop(formName) {
+	elements.header_desktop.removeAllTabs();
+	elements.header_desktop.addTab(formName);
 }

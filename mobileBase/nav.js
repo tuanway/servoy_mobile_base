@@ -12,10 +12,10 @@ var header_title = '';
  *
  * @properties={typeid:24,uuid:"B129AD39-98FB-41A7-9171-3652FA9F5147"}
  */
-function goBack(event) {	
+function goBack(event) {
 	scopes.svyNavigation.close();
 	var item = scopes.svyNavigation.getCurrentItem();
-	var n = item.getFormName();	
+	var n = item.getFormName();
 	//check to see what level we are at and move down a level if needed.
 	if (n.indexOf('_level_') != -1) {
 		var level = n.split('_level_')[1];
@@ -29,7 +29,6 @@ function goBack(event) {
 	}
 	return gotoSubForm(1);
 }
-
 
 /**
  * Perform the element default action.
@@ -45,7 +44,6 @@ function goHome(event) {
 	scopes.nav.gotoForm(event, 'homeContainer', 'Main Menu');
 	gotoSubForm(1);
 }
-
 
 /**
  * @param {JSEvent} event
@@ -68,7 +66,7 @@ function gotoForm(event, formName, title, customData) {
 	if (title) item.setText(title)
 	if (customData) item.setCustomData(customData);
 
-	scopes.svyNavigation.open(item);	
+	scopes.svyNavigation.open(item);
 	forms.nav.switchContent(formName.split('_level_')[0]);
 	application.showForm('nav');
 }
@@ -109,7 +107,6 @@ function gotoSubForm(level) {
 	gotoForm(null, nm, '');
 }
 
-
 /**
  * @param {String} id
  * @param {String} title
@@ -120,27 +117,40 @@ function gotoSubForm(level) {
  * @properties={typeid:24,uuid:"070BD1DA-A9B0-407B-8BA4-43AA1D573141"}
  * @AllowToRunInFind
  */
-function addMenuItem(id,title, icon, color, order, parent) {
+function addMenuItem(id, title, icon, color, order, parent) {
 	var f = datasources.mem.menu.getFoundSet();
-	
+
 	//check if menu item exists already
 	f.find();
 	f.menu_id = id;
 	f.search();
-	if (f.getSize()==0) {
-		if (f.newRecord()){
+	if (f.getSize() == 0) {
+		if (f.newRecord()) {
 			f.menu_id = id;
-			f.menu_display = '<i class="fas '+icon+'"></i> <br> '+title;
+			f.menu_display = '<i class="fas ' + icon + '"></i> <br> ' + title;
 			f.menu_color = color;
 			f.menu_order = order;
 			f.menu_parent = parent;
 			if (parent) {
-				f.menu_display = '<i class="fas '+icon+'"></i> '+title;
+				f.menu_display = '<i class="fas ' + icon + '"></i> ' + title;
 			}
 			databaseManager.saveData(f);
-		}		
+		}
 	} else {
 		throw 'Menu item already exists';
 	}
-	
+
+}
+
+/**
+ * @param {String} formName
+ * @param {Boolean} [mobile]
+ * @properties={typeid:24,uuid:"6DA182A6-50AE-4A17-B321-E2F63FB94247"}
+ */
+function setHeaders(formName, mobile) {
+	if (mobile) {
+		forms.nav.setHeaderMobile(formName);
+	} else {
+		forms.nav.setHeaderDesktop(formName);
+	}
 }

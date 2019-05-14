@@ -17,6 +17,10 @@ function onSolutionOpen(arg, queryParams) {
 	//setup main/sub menu
 	createMenuData();
 	
+	//setup headers
+	scopes.nav.setHeaders('headerMobile',true);
+	scopes.nav.setHeaders('headerDesktop',true);
+	
 }
 
 /**
