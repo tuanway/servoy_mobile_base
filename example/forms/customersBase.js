@@ -46,7 +46,7 @@ function submit() {
  * @param {Boolean} firstShow form is shown first time after load
  * @param {JSEvent} event the event that triggered the action
  *
- * @private
+ * @public 
  *
  * @properties={typeid:24,uuid:"346B14B2-CA66-4CFC-999A-84F279481A22"}
  */

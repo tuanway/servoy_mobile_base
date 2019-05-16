@@ -19,7 +19,7 @@ function onSolutionOpen(arg, queryParams) {
 	
 	//setup headers
 	scopes.nav.setHeaders('headerMobile',true);
-	scopes.nav.setHeaders('headerDesktop',true);
+	scopes.nav.setHeaders('headerDesktop',false);
 	
 }
 
@@ -47,7 +47,7 @@ function createMenuData(){
 	scopes.nav.addMenuItem('ordersContainer','Orders','fa-circle','nav-yellow',2,'customers');	
 	
 	//Add Sub Menu for shipping
-	scopes.nav.addMenuItem('Test','Test','fa-circle','nav-skyblue',1,'shipping');	
+	scopes.nav.addMenuItem('testContainer','Test','fa-circle','nav-skyblue',1,'shipping');	
 	
 	databaseManager.saveData(f);
 }

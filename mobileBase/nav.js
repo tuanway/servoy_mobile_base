@@ -96,8 +96,10 @@ function toggleHeaderButtons(elName) {
  * @properties={typeid:24,uuid:"52E1B658-11B3-454A-A35B-0CC5B53EF71E"}
  */
 function gotoSubForm(level) {
+
 	//first get current form
 	var f = scopes.svyNavigation.getCurrentItem().getFormName().split('_level_')[0];
+
 	forms[f].switchForms(level);
 	//generate navigation item for sub menu
 	var nm = f;

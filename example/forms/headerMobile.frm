@@ -3,7 +3,7 @@ useCssPosition:true",
 extendsID:"F7D861AA-E927-4471-8343-52D0E619F6E6",
 items:[
 {
-cssPosition:"5,-1,-1,0,calc( 30% - 10px),30",
+cssPosition:"5,-1,-1,0,calc(30% - 10px),30",
 name:"back",
 onActionMethodID:"B129AD39-98FB-41A7-9171-3652FA9F5147",
 styleClass:"header_button",
@@ -21,10 +21,10 @@ typeid:7,
 uuid:"968CF298-6C8C-4303-9FD2-B01E14CB6A89"
 },
 {
-cssPosition:"4,30%,-1,30%,calc( 40% - 20px),30",
+cssPosition:"3,30%,-1,30%,calc( 40% - 20px),30",
 dataProviderID:"scopes.nav.header_title",
 name:"title",
-onActionMethodID:"E9DDBF79-D9E6-4303-A474-9938A5755C56",
+onActionMethodID:"A27702C1-8C01-4E4E-9A84-4EDFA47087AC",
 styleClass:"header_title",
 text:"Customers Header",
 transparent:true,
