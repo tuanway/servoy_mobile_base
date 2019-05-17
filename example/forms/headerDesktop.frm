@@ -8,7 +8,7 @@ dataProviderID:"scopes.nav.header_title",
 name:"title",
 onActionMethodID:"A27702C1-8C01-4E4E-9A84-4EDFA47087AC",
 styleClass:"header_title",
-text:"Customers Header",
+text:"Header",
 transparent:true,
 typeid:7,
 uuid:"16421977-E154-46C4-ACD8-FA456ECA0028"

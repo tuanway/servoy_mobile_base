@@ -156,3 +156,13 @@ function setHeaders(formName, mobile) {
 		forms.nav.setHeaderDesktop(formName);
 	}
 }
+
+/**
+ * Initializes the module.
+ * @public
+ * @SuppressWarnings (unused)
+ * @properties={typeid:35,uuid:"9C3DE1BE-A17E-4380-AB9F-09500C26514F",variableType:-4}
+ */
+var init = function() {
+	application.showForm(forms.nav);
+}
