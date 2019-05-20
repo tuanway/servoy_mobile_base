@@ -158,6 +158,32 @@ function setHeaders(formName, mobile) {
 }
 
 /**
+ * Get current level of shown form
+ * @properties={typeid:24,uuid:"1879BF61-1875-45B0-921A-1DEC911C835B"}
+ */
+function getCurrentLevel() {
+	var f = scopes.svyNavigation.getCurrentItem().getFormName().split('_')[0];
+	if (f) {
+		var el = forms[f].elements;
+		//get current form names
+		/** @type {String} */
+		var mF = el['mobile'].getTabFormNameAt(1);
+		mF = mF[mF.length - 1];
+		mF = isNaN(mF) ? 1 : mF;
+		/** @type {String} */
+		var dF = el['desktop'].getTabFormNameAt(1);
+		dF = dF[dF.length - 1];
+		dF = isNaN(dF) ? 1 : dF;
+
+		return {
+			mobile_level: mF,
+			desktop_level: dF
+		}
+	}
+	return null;
+}
+
+/**
  * Initializes the module.
  * @public
  * @SuppressWarnings (unused)

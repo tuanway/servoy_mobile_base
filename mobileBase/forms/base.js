@@ -6,7 +6,7 @@ function validate(el) {
 	var validation_message = validateDP(el);
 	if (validation_message != '') {
 		elements[el].requestFocus();
-		elements[el].addStyleClass('validate_focus')
+		elements[el].addStyleClass('validate_focus')		
 		forms.validate_popup.show(validation_message, elements[el]);
 		return false;
 	}

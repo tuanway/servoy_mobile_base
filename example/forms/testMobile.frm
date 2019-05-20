@@ -30,16 +30,6 @@ typeid:7,
 uuid:"B7726077-B7D8-4CE7-A44C-5E5AFDFF4DCB"
 },
 {
-cssPosition:"407,-1,-1,186,118,52",
-onActionMethodID:"58A93D88-8878-40BB-930E-BC48C18E3524",
-onDoubleClickMethodID:"-1",
-onRightClickMethodID:"-1",
-styleClass:"mobile_button",
-text:"Next",
-typeid:7,
-uuid:"C676D541-B56C-4605-8289-B4F3B99A2878"
-},
-{
 height:480,
 partType:5,
 typeid:19,
