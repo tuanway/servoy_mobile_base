@@ -6,6 +6,13 @@
 var test;
 
 /**
+ * @type {Date}
+ *
+ * @properties={typeid:35,uuid:"B6F0B12D-8A76-4081-ACCB-7DE7C452C53E",variableType:93}
+ */
+var date_test;
+
+/**
  * @param {String} el
  * @override
  *
