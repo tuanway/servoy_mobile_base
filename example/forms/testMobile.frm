@@ -22,7 +22,7 @@ uuid:"8F06841A-ED49-453F-8910-57E1E31475F1"
 },
 {
 cssPosition:"10,-1,-1,10,35%,35",
-labelFor:"address",
+labelFor:"test",
 name:"test_label",
 styleClass:"mobile_label",
 text:"Test",
@@ -31,7 +31,7 @@ uuid:"B7726077-B7D8-4CE7-A44C-5E5AFDFF4DCB"
 },
 {
 cssPosition:"53,-1,-1,9,35%,35",
-labelFor:"address",
+labelFor:"test_date",
 name:"test_date_label",
 styleClass:"mobile_label",
 text:"Test",

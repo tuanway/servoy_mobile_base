@@ -22,7 +22,7 @@ uuid:"C0820C49-1490-432F-81FD-7E76BC7CD174"
 },
 {
 cssPosition:"10,-1,-1,10,35%,35",
-labelFor:"address",
+labelFor:"test",
 name:"test_label",
 styleClass:"mobile_label",
 text:"Test",
