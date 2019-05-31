@@ -43,6 +43,18 @@ function submit() {
 		application.output(scopes.nav.getCurrentLevel())
 		if (scopes.nav.getCurrentLevel().mobile_level == 1) {
 			scopes.nav.gotoSubForm(2);
+			return;
+		}
+
+		if (scopes.nav.getCurrentLevel().mobile_level == 2) {
+			scopes.nav.gotoSubForm(3);
+			return;
+		}
+
+		if (scopes.nav.getCurrentLevel().mobile_level == 3) {
+			scopes.nav.gotoSubForm(1);
+			return;
 		}
 	}
+	return;
 }

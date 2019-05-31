@@ -3,7 +3,7 @@ useCssPosition:true",
 extendsID:"7EE800FC-938A-4380-95AF-7C4E398B7171",
 items:[
 {
-cssPosition:"10,-1,-1,40%,calc( 60% - 10px),35",
+cssPosition:"50,-1,-1,40%,calc( 60% - 10px),35",
 customProperties:"attributes:{\
 autocomplete:\"off\"\
 }",
@@ -21,7 +21,7 @@ typeid:19,
 uuid:"C0820C49-1490-432F-81FD-7E76BC7CD174"
 },
 {
-cssPosition:"10,-1,-1,10,35%,35",
+cssPosition:"50,-1,-1,10,35%,35",
 labelFor:"test",
 name:"test_label",
 styleClass:"mobile_label",

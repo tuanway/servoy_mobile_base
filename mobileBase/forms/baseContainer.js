@@ -7,14 +7,19 @@ function switchForms(level) {
 	var mF = elements.mobile.getTabFormNameAt(1);
 	var dF = elements.desktop.getTabFormNameAt(1);
 
-	if (level == 1) {
+	if (controller.getName().indexOf('Container') != 1) {
 		mF = controller.getName().split('Container')[0] + 'Mobile';
 		dF = controller.getName().split('Container')[0] + 'Desktop';
-		level = '';
+		if (level == 1) {
+			level = '';
+		}
 	}
 
 	var va = solutionModel.getForm(mF).extendsForm.getVariables();
-
+	
+	var mcl = scopes.nav.getCurrentLevel().mobile_level==1?'':scopes.nav.getCurrentLevel().mobile_level
+	var dcl = scopes.nav.getCurrentLevel().desktop_level==1?'':scopes.nav.getCurrentLevel().desktop_level
+	
 	//check if form exists for level, if not don't remove current form.
 	//else switch to that form.
 	if (forms[mF + level]) {
@@ -22,7 +27,7 @@ function switchForms(level) {
 		elements.mobile.removeAllTabs();
 		elements.mobile.addTab(mF + level);
 		for (var i = 0; i < va.length; i++) {
-			forms[mF + level][va[i].name] = forms[mF][va[i].name];
+			forms[mF + level][va[i].name] = forms[mF+mcl][va[i].name];
 		}
 
 	}
@@ -31,7 +36,7 @@ function switchForms(level) {
 		elements.desktop.removeAllTabs();
 		elements.desktop.addTab(dF + level);
 		for (i = 0; i < va.length; i++) {
-			forms[dF + level][va[i].name] = forms[dF][va[i].name];
+			forms[dF + level][va[i].name] = forms[dF+dcl][va[i].name];
 		}
 	}
 }

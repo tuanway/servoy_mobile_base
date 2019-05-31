@@ -106,6 +106,7 @@ function gotoSubForm(level) {
 	if (level != 1) {
 		nm = f + '_level_' + level
 	}
+
 	gotoForm(null, nm, '');
 }
 
@@ -191,4 +192,7 @@ function getCurrentLevel() {
  */
 var init = function() {
 	application.showForm(forms.nav);
+	var po = scopes.svyNavigation.createNavigationPolicies();
+	po.setNavigationPolicy(scopes.svyNavigation.NAVIGATION_POLICY.LINEAR)
+	scopes.svyNavigation.setNavigationPolicies(po);
 }
