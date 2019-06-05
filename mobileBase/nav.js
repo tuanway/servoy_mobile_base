@@ -170,11 +170,11 @@ function getCurrentLevel() {
 		/** @type {String} */
 		var mF = el['mobile'].getTabFormNameAt(1);
 		mF = mF[mF.length - 1];
-		mF = isNaN(mF) ? 1 : mF;
+		mF = isNaN(mF) ? 1 : parseInt(mF);
 		/** @type {String} */
 		var dF = el['desktop'].getTabFormNameAt(1);
 		dF = dF[dF.length - 1];
-		dF = isNaN(dF) ? 1 : dF;
+		dF = isNaN(dF) ? 1 : parseInt(dF);
 
 		return {
 			mobile_level: mF,

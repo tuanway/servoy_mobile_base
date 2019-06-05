@@ -41,20 +41,21 @@ function validateDP(el) {
 function submit() {
 	if (_super.submit.apply(this, arguments)) {
 		application.output(scopes.nav.getCurrentLevel())
-		if (scopes.nav.getCurrentLevel().mobile_level == 1) {
+		switch (scopes.nav.getCurrentLevel().mobile_level) {
+		case 1:
 			scopes.nav.gotoSubForm(2);
-			return;
-		}
-
-		if (scopes.nav.getCurrentLevel().mobile_level == 2) {
+			break;
+		case 2:
 			scopes.nav.gotoSubForm(3);
-			return;
+			break;
+		case 3:
+			scopes.nav.gotoSubForm(1);
+			break;
+
+		default:
+			break;
 		}
 
-		if (scopes.nav.getCurrentLevel().mobile_level == 3) {
-			scopes.nav.gotoSubForm(1);
-			return;
-		}
 	}
 	return;
 }
