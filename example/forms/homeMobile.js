@@ -3,7 +3,7 @@
  *
  * @private
  *
- * @properties={typeid:24,uuid:"94FA0B2C-AD94-41E3-BB1B-5B57732E7E5D"}
+ * @properties={typeid:24,uuid:"F008DF29-F4BE-4D36-83F3-848519AD16FD"}
  */
 function selectMenuItem(event) {
 	loadSubMenu(foundset.getSelectedRecord().menu_id);
@@ -18,9 +18,9 @@ function selectMenuItem(event) {
  * @param {Boolean} firstShow form is shown first time after load
  * @param {JSEvent} event the event that triggered the action
  *
- * @private
+ * @public
  *
- * @properties={typeid:24,uuid:"C35F43EF-211B-45A6-8F13-E6DB967D89A3"}
+ * @properties={typeid:24,uuid:"49E0715B-8D90-42DE-AFCC-E924FFCCBA08"}
  */
 function onShow(firstShow, event) {
 	loadMainMenu();

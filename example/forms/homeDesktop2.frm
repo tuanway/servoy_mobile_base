@@ -1,7 +1,7 @@
 customProperties:"formComponent:false,\
 useCssPosition:true",
 dataSource:"mem:menu",
-extendsID:"AE4B392D-3B56-414B-AA23-720229130E83",
+extendsID:"57BE5459-1284-445A-BBB6-B5BDB6DE458C",
 name:"homeDesktop2",
 typeid:3,
-uuid:"B2515907-4D07-485F-B6FE-812C671DC08E"
+uuid:"7615ABFF-EA07-4FBC-98CA-25198C906D8B"

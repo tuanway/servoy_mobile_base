@@ -11,10 +11,7 @@ item:{
 dataProviderID:"customer_id",
 onActionMethodID:"7D5E0344-C2F4-489D-A897-E99906AC47B3"
 },
-onrenderlabel_380:{
-
-},
-svy_form:"AEFAC276-67CC-4B9F-9FBF-B182CE7BBD03"
+svy_form:"36D0FA8B-68CC-4E20-B16F-EA2A8920A83F"
 },
 cssPosition:{
 bottom:"-1",

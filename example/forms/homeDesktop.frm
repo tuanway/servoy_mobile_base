@@ -1,0 +1,17 @@
+customProperties:"formComponent:false,\
+useCssPosition:true",
+encapsulation:60,
+extendsID:"FA34F164-FE5B-48AD-BE26-7BCA7A02D184",
+items:[
+{
+extendsID:"51B4D139-0789-445E-B461-1A38728032AE",
+height:480,
+typeid:19,
+uuid:"9EB9C629-B0BF-4C3B-9977-BD3FE0CA75AE"
+}
+],
+name:"homeDesktop",
+onShowMethodID:"49E0715B-8D90-42DE-AFCC-E924FFCCBA08",
+showInMenu:true,
+typeid:3,
+uuid:"CC4D389D-463F-417B-8605-3679A7D3C98C"

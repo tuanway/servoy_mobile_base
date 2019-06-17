@@ -1,6 +1,6 @@
 /**
  * @public
- * @properties={typeid:24,uuid:"D0C2B413-8980-4F5E-BBC4-B9245F26154A"}
+ * @properties={typeid:24,uuid:"A8C7EA54-A6EA-4314-A38F-4CC087B6A05F"}
  * @AllowToRunInFind
  */
 function loadMainMenu() {
@@ -13,7 +13,7 @@ function loadMainMenu() {
 /**
  * @public
  * @param {String} [id]
- * @properties={typeid:24,uuid:"0497C524-96E3-4B42-8952-6CD187397686"}
+ * @properties={typeid:24,uuid:"90BC356F-39D4-4C9D-869F-206F67B36BD7"}
  * @AllowToRunInFind
  */
 function loadSubMenu(id) {
