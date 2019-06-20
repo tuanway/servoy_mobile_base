@@ -52,7 +52,8 @@ cssPosition:"15,-1,-1,10,150px,calc( 100% - 20px)",
 json:{
 containedForm:{
 item:{
-dataProviderID:"customer_id"
+dataProviderID:"customer_id",
+onActionMethodID:"4821B0DA-55EE-43D6-B6A2-DB539E1EA8A9"
 },
 svy_form:"36D0FA8B-68CC-4E20-B16F-EA2A8920A83F"
 },
