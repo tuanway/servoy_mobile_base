@@ -124,7 +124,7 @@ function submit() {
  *
  * @properties={typeid:24,uuid:"45935E75-C8B7-4A51-8FC0-9E238B2FE23A"}
  */
-function onLoad(event) {
+function onLoad(event) {	
 	scopes.svyApplicationCore.addDataBroadcastListener(dataBroadcastEventListener)
 }
 

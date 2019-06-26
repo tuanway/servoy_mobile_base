@@ -128,7 +128,7 @@ uuid:"949C5118-D351-4BD5-8643-5FBFA1DA01C8"
 },
 {
 anchors:14,
-cssPosition:"255,-1,-1,181,calc(100% - 188px),60",
+cssPosition:"calc( 100% - 70px),-1,-1,181,calc(100% - 190px),60",
 name:"submit",
 onActionMethodID:"20BB89FC-3C5C-47CE-ADAE-FF348107FE05",
 onDoubleClickMethodID:"-1",
@@ -194,6 +194,6 @@ uuid:"FB3754BF-F448-43CC-A3F5-2D74255BCE01"
 }
 ],
 name:"customersDesktop",
-size:"1162,275",
+size:"810,480",
 typeid:3,
 uuid:"D3CCBCB7-BF69-4853-9372-E0117093E784"

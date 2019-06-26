@@ -21,7 +21,7 @@ uuid:"2305606E-4503-400F-AF03-22EA815C71CF"
 },
 {
 anchors:14,
-cssPosition:"321,-1,-1,7,calc(100% - 20px),60",
+cssPosition:"320,-1,-1,7,calc(100% - 20px),60",
 onActionMethodID:"20BB89FC-3C5C-47CE-ADAE-FF348107FE05",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
