@@ -6,7 +6,7 @@ function validate(el) {
 	var validation_message = validateDP(el);
 	if (validation_message != '') {
 		elements[el].requestFocus();
-		elements[el].addStyleClass('validate_focus')		
+		elements[el].addStyleClass('validate_focus')
 		forms.validate_popup.show(validation_message, elements[el]);
 		return false;
 	}
@@ -125,5 +125,62 @@ function submit() {
  * @properties={typeid:24,uuid:"45935E75-C8B7-4A51-8FC0-9E238B2FE23A"}
  */
 function onLoad(event) {
-	
+	scopes.svyApplicationCore.addDataBroadcastListener(dataBroadcastEventListener)
+}
+
+/**
+ * @param {String} dataSource
+ * @param {Number} action
+ * @param {JSDataSet} pks
+ * @param {Boolean} cached
+ * @properties={typeid:24,uuid:"1E3FB978-0CCC-4B3F-A3AC-BADCE6966261"}
+ */
+function dataBroadcastEventListener(dataSource, action, pks, cached) {
+	refreshData(dataSource, action, pks);
+}
+
+/**
+ * @param {String} dataSource
+ * @param {Number} action
+ * @param {JSDataSet} pks
+ * @param {Array<JSFoundSet>} [foundsets] if we need additional foundsets refreshed
+ * @properties={typeid:24,uuid:"B7C3E80C-E058-4B2F-88A3-B0B14547B9FE"}
+ */
+function refreshData(dataSource, action, pks, foundsets) {
+	if (foundsets) {
+		for (var i = 0; i < foundsets.length; i++) {
+			databaseManager.refreshRecordFromDatabase(foundsets[i], -1);
+		}
+	}
+
+	if (foundset) {
+		if (dataSource == foundset.getDataSource()) {
+			//by default just refresh current client cache
+			databaseManager.refreshRecordFromDatabase(foundset, -1);
+			//overide if we need more than the current foundset
+		}
+	}
+}
+
+/**
+ * @param {String} dataSource
+ * @param {String} table
+ * @param {Array} pks
+ * @param {Number} action
+ * @properties={typeid:24,uuid:"20FC24DB-F37B-4A88-B4DD-91A44E342410"}
+ */
+function broadCastChange(dataSource, table, pks, action) {
+	//var action = SQL_ACTION_TYPES.DELETE_ACTION //pks deleted
+	//var action = SQL_ACTION_TYPES.INSERT_ACTION //pks inserted
+	//var action = SQL_ACTION_TYPES.UPDATE_ACTION //pks updates
+	if (!pks) {
+		pks = foundset.getSelectedRecord().getPKs();
+	}
+
+	if (!dataSource) {
+		dataSource = databaseManager.getDataSourceServerName(controller.getDataSource())
+	}
+
+	var pksdataset = databaseManager.convertToDataSet(pks);
+	return plugins.rawSQL.notifyDataChange(dataSource, table, pksdataset, action);
 }
