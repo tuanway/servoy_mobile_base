@@ -125,7 +125,7 @@ function submit() {
  * @properties={typeid:24,uuid:"45935E75-C8B7-4A51-8FC0-9E238B2FE23A"}
  */
 function onLoad(event) {	
-	scopes.svyApplicationCore.addDataBroadcastListener(dataBroadcastEventListener)
+	scopes.svyApplicationCore.addDataBroadcastListener(dataBroadcastEventListener);
 }
 
 /**
@@ -155,9 +155,9 @@ function refreshData(dataSource, action, pks, foundsets) {
 
 	if (foundset) {
 		if (dataSource == foundset.getDataSource()) {
-			//by default just refresh current client cache
+			//by default just refresh current client cache for selected record
 			databaseManager.refreshRecordFromDatabase(foundset, -1);
-			//overide if we need more than the current foundset
+			//override if we need more than the current foundset
 		}
 	}
 }
