@@ -10,14 +10,3 @@
 function openDetailForm(event) {
 	scopes.nav.gotoSubForm(2);
 }
-
-/**
- * @param {Boolean} firstShow
- * @param {JSEvent} event
- * @override
- *
- * @properties={typeid:24,uuid:"2E1E1AF8-80FC-44B4-88C9-589D1D5BB83E"}
- */
-function onShow(firstShow, event) {	
-	return _super.onShow(firstShow, event);
-}

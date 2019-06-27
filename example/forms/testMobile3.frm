@@ -1,4 +1,10 @@
 customProperties:"formComponent:false,\
+methods:{\
+onShowMethodID:{\
+arguments:null,\
+parameters:null\
+}\
+},\
 useCssPosition:true",
 extendsID:"7EE800FC-938A-4380-95AF-7C4E398B7171",
 items:[
@@ -31,6 +37,7 @@ uuid:"CB7C2EDB-3B56-46BA-B38D-3686EDDBB60B"
 }
 ],
 name:"testMobile3",
+onShowMethodID:"B2FBF6E6-04C6-47F1-B001-78BEBB62E67D",
 size:"340,480",
 typeid:3,
 uuid:"D5F8DFB8-9AD3-411C-BA33-663B4CE184CD"

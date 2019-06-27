@@ -8,5 +8,6 @@
  * @properties={typeid:24,uuid:"28AB43B6-2F04-4676-B898-5439DCF9FA26"}
  */
 function onShow(firstShow, event) {
-	test = '';
+	test = '';	
+	application.output('onshow mobile1');
 }
