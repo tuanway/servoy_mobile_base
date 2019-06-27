@@ -65,10 +65,8 @@ function gotoForm(event, formName, title, customData) {
 	}
 	if (title) item.setText(title)
 	if (customData) item.setCustomData(customData);
-
-	scopes.svyNavigation.open(item);
 	forms.nav.switchContent(formName.split('_level_')[0]);
-	application.showForm('nav');
+	scopes.svyNavigation.open(item);
 }
 
 /**
@@ -99,14 +97,12 @@ function gotoSubForm(level) {
 
 	//first get current form
 	var f = scopes.svyNavigation.getCurrentItem().getFormName().split('_level_')[0];
-
 	forms[f].switchForms(level);
 	//generate navigation item for sub menu
 	var nm = f;
 	if (level != 1) {
 		nm = f + '_level_' + level
 	}
-
 	gotoForm(null, nm, '');
 }
 
