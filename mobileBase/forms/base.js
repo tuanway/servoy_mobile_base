@@ -137,6 +137,7 @@ function onLoad(event) {
  */
 function dataBroadcastEventListener(dataSource, action, pks, cached) {
 	refreshData(dataSource, action, pks);
+//	refreshData(dataSource, action, pks,[foundset1,fooundset2]); optional
 }
 
 /**
@@ -170,15 +171,27 @@ function refreshData(dataSource, action, pks, foundsets) {
  * @properties={typeid:24,uuid:"20FC24DB-F37B-4A88-B4DD-91A44E342410"}
  */
 function broadCastChange(dataSource, table, pks, action) {
-	//var action = SQL_ACTION_TYPES.DELETE_ACTION //pks deleted
-	//var action = SQL_ACTION_TYPES.INSERT_ACTION //pks inserted
-	//var action = SQL_ACTION_TYPES.UPDATE_ACTION //pks updates
+	
+	//if we don't have a default action
+	if (!action) {
+		if (foundset.getSelectedRecord().isNew()){
+			action = SQL_ACTION_TYPES.INSERT_ACTION;
+		} else {
+			action = SQL_ACTION_TYPES.UPDATE_ACTION;
+		}
+	}
+	
+	//get pks from current record
 	if (!pks) {
 		pks = foundset.getSelectedRecord().getPKs();
 	}
-
+	//get current datasource from foundset
 	if (!dataSource) {
 		dataSource = databaseManager.getDataSourceServerName(controller.getDataSource())
+	}
+	//get current tablename from foundset
+	if (!table) {
+		table = databaseManager.getTable(foundset).getSQLName();
 	}
 
 	var pksdataset = databaseManager.convertToDataSet(pks);
