@@ -20,8 +20,7 @@ function onSolutionOpen(arg, queryParams) {
 	scopes.nav.setHeaders('headerMobile', true);
 	scopes.nav.setHeaders('headerDesktop', false);
 
-	scopes.nav.init();
-
+	scopes.nav.init();	
 }
 
 /**
