@@ -9,15 +9,6 @@ function switchContent(formName) {
 	elements.content.removeAllTabs();
 	elements.content.addTab(formName);
 }
-/**
- * @param {JSEvent} event
- * @override
- *
- * @properties={typeid:24,uuid:"4FCFE1C7-4F88-46C3-982D-6DD29DFE3741"}
- */
-function onLoad(event) {
-	scopes.nav.gotoForm(event, 'homeContainer', 'Main Menu');
-}
 
 /**
  * @param formName
@@ -37,4 +28,20 @@ function setHeaderMobile(formName) {
 function setHeaderDesktop(formName) {
 	elements.header_desktop.removeAllTabs();
 	elements.header_desktop.addTab(formName);
+}
+
+/**
+ * Callback method for when form is shown.
+ *
+ * @param {Boolean} firstShow form is shown first time after load
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @private
+ *
+ * @properties={typeid:24,uuid:"F52CB5A5-CB1D-40AA-9EF0-5EF73F78DC5D"}
+ */
+function onShow(firstShow, event) {
+	if (firstShow){
+		scopes.nav.goHome(event);
+	}
 }
