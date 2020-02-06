@@ -130,6 +130,7 @@ function addMenuItem(id, title, icon, color, order, parent) {
 			f.menu_color = color;
 			f.menu_order = order;
 			f.menu_parent = parent;
+			f.menu_title = title;
 			if (parent) {
 				f.menu_display = '<i class="fas ' + icon + '"></i> ' + title;
 			}
@@ -156,7 +157,6 @@ function setHeaders(formName, mobile) {
 
 /**
  * Get current level of shown form
- * @return {{mobile_level:String,desktop_level:String}}
  * @properties={typeid:24,uuid:"1879BF61-1875-45B0-921A-1DEC911C835B"}
  */
 function getCurrentLevel() {
@@ -185,7 +185,7 @@ function getCurrentLevel() {
  * Initializes the module.
  * @public
  * @SuppressWarnings (unused)
- * @properties={typeid:35,uuid:"9C3DE1BE-A17E-4380-AB9F-09500C26514F",variableType:-4}
+ * @properties={typeid:35,uuid:"16133A46-6977-4CA5-9CBC-20DEF7CA19F4",variableType:-4}
  */
 var init = function() {
 	application.showForm(forms.nav);
