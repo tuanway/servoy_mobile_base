@@ -24,6 +24,8 @@ function switchForms(level) {
 	if (forms[mF + level]) {
 		//if form is on current level then don't remove forms
 		if (level == '' && ! (/\d/.test(elements.mobile.getTabFormNameAt(1)))) {
+			if (forms[mF + level].onShow)
+				forms[mF + level].onShow();
 			return;
 		}
 
@@ -41,6 +43,8 @@ function switchForms(level) {
 	if (forms[dF + level]) {
 		//if form is on current level then don't remove forms
 		if (level == '' && ! (/\d/.test(elements.desktop.getTabFormNameAt(1)))) {
+			if (forms[dF + level].onShow)
+				forms[dF + level].onShow();
 			return;
 		}
 		//add new navigation object for form
