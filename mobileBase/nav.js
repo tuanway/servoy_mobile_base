@@ -156,6 +156,7 @@ function setHeaders(formName, mobile) {
 
 /**
  * Get current level of shown form
+ * @return {{mobile_level:String,desktop_level:String}}
  * @properties={typeid:24,uuid:"1879BF61-1875-45B0-921A-1DEC911C835B"}
  */
 function getCurrentLevel() {
