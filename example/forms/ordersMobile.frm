@@ -4,7 +4,7 @@ extendsID:"DB74DA39-4863-4978-83CF-57D8ADBB4F6C",
 items:[
 {
 cssPosition:"110,-1,-1,40%,calc( 60% - 10px),35",
-dataProviderID:"employee_id",
+dataProviderID:"employeeid",
 name:"employee_id",
 text:"Employee Id",
 typeid:4,
@@ -50,7 +50,7 @@ uuid:"6D661F08-22FE-4AC7-9F07-50610738612C"
 },
 {
 cssPosition:"10,-1,-1,40%,calc( 60% - 10px),35",
-dataProviderID:"order_id",
+dataProviderID:"orderid",
 editable:false,
 name:"order_id",
 text:"Order Id",
@@ -65,7 +65,7 @@ uuid:"AD843645-1229-49C4-AA9B-F156159FD704"
 },
 {
 cssPosition:"60,-1,-1,40%,calc( 60% - 10px),35",
-dataProviderID:"customer_id",
+dataProviderID:"customerid",
 name:"customer_id",
 text:"Customer Id",
 typeid:4,
