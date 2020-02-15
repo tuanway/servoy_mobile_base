@@ -52,7 +52,7 @@ cssPosition:"15,-1,-1,10,150px,calc( 100% - 20px)",
 json:{
 containedForm:{
 item:{
-dataProviderID:"customer_id",
+dataProviderID:"customerid",
 onActionMethodID:"4821B0DA-55EE-43D6-B6A2-DB539E1EA8A9"
 },
 svy_form:"36D0FA8B-68CC-4E20-B16F-EA2A8920A83F"
@@ -100,7 +100,7 @@ uuid:"7AE8FAA2-244D-408D-B0B1-AB1B9D0E2CA6"
 },
 {
 cssPosition:"10,-1,-1,321,160,35",
-dataProviderID:"customer_id",
+dataProviderID:"customerid",
 editable:false,
 name:"customer_id",
 onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",

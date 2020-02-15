@@ -139,7 +139,7 @@ cssPosition:"10,-1,-1,40%,calc( 60% - 10px),35",
 customProperties:"attributes:{\
 autocomplete:\"off\"\
 }",
-dataProviderID:"customer_id",
+dataProviderID:"customerid",
 editable:false,
 name:"customer_id",
 onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",

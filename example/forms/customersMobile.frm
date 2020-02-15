@@ -4,26 +4,26 @@ dataSource:"db:/example_data/customers",
 extendsID:"D1F73E24-71C9-45E8-852E-873FE4BCBF2C",
 items:[
 {
-cssPosition:"10,-1,-1,5,calc(100% - 10px),calc(100% - 15px)",
+cssPosition:"10,5,15,5,-1,-1",
 json:{
 containedForm:{
 item:{
-dataProviderID:"customer_id",
+dataProviderID:"customerid",
 onActionMethodID:"7D5E0344-C2F4-489D-A897-E99906AC47B3"
 },
 svy_form:"36D0FA8B-68CC-4E20-B16F-EA2A8920A83F"
 },
 cssPosition:{
-bottom:"-1",
-height:"calc(100% - 15px)",
+bottom:"15",
+height:"-1",
 left:"5",
-right:"-1",
+right:"5",
 top:"10",
-width:"calc(100% - 10px)"
+width:"-1"
 },
 formIndex:0,
 pageLayout:"listview",
-responsivePageSize:10000
+responsivePageSize:1000
 },
 name:"sub_menu",
 typeName:"servoyextra-listformcomponent",
