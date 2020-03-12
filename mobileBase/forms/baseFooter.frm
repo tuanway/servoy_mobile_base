@@ -1,0 +1,15 @@
+customProperties:"formComponent:false,\
+useCssPosition:true",
+encapsulation:60,
+items:[
+{
+height:40,
+partType:5,
+typeid:19,
+uuid:"88BD330C-8126-44B6-BFD5-BC3673BEFDA1"
+}
+],
+name:"baseFooter",
+showInMenu:true,
+typeid:3,
+uuid:"5CE48DBC-FD1F-4B89-8203-0EC52B4187AA"

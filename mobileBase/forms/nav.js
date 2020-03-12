@@ -23,6 +23,26 @@ function setHeaderMobile(formName) {
 /**
  * @param formName
  *
+ * @properties={typeid:24,uuid:"4AE53943-F5A6-41F4-82A4-DF230805EB7E"}
+ */
+function setFooterMobile(formName) {
+	elements.footer_mobile.removeAllTabs();
+	elements.footer_mobile.addTab(formName);
+}
+
+/**
+ * @param formName
+ *
+ * @properties={typeid:24,uuid:"50A934E4-DDEB-4422-995D-A43459EF8E15"}
+ */
+function setFooterDesktop(formName) {
+	elements.footer_desktop.removeAllTabs();
+	elements.footer_desktop.addTab(formName);
+}
+
+/**
+ * @param formName
+ *
  * @properties={typeid:24,uuid:"692EBA55-9183-4112-BBE6-0E870B606955"}
  */
 function setHeaderDesktop(formName) {

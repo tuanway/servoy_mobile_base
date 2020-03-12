@@ -1,4 +1,10 @@
 customProperties:"formComponent:false,\
+methods:{\
+onShowMethodID:{\
+arguments:null,\
+parameters:null\
+}\
+},\
 useCssPosition:true",
 encapsulation:60,
 extendsID:"949256C2-DB35-4FED-93B4-5CC2E0643090",
@@ -48,6 +54,7 @@ uuid:"A1C88078-DEF3-463A-ACF1-3D3F5B08E0B9"
 }
 ],
 name:"baseContainer",
+onShowMethodID:"5B766F61-3715-4892-A9AB-DA2ED7F2A928",
 showInMenu:true,
 typeid:3,
 uuid:"DB5448CA-5817-4529-AAE3-B4A316724044"

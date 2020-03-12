@@ -12,7 +12,7 @@ items:[
 cssPosition:"calc( 100% - 50px),0,0,0,100%,50",
 items:[
 {
-containsFormID:"BBC7AC8C-E79F-4699-ACE1-EED59845814B",
+containsFormID:"5CE48DBC-FD1F-4B89-8203-0EC52B4187AA",
 location:"10,40",
 name:"footer_mobile",
 text:"footer",
@@ -27,7 +27,7 @@ typeid:16,
 uuid:"0C190844-A532-4913-8434-40D9A9C7F136"
 },
 {
-cssPosition:"0,0,calc( 100% - 40px),0,100%,40",
+cssPosition:"0,0,calc( 100% - 50px),0,100%,50",
 items:[
 {
 containsFormID:"DB77AD75-4BC1-4F02-AEBC-24916E01A536",
@@ -63,13 +63,13 @@ typeid:16,
 uuid:"65610A97-EBB8-4344-94DE-E27E55533C93"
 },
 {
-cssPosition:"calc( 100% - 50px),0,0,0,100%,0",
+cssPosition:"calc( 100% - 50px),0,0,0,100%,50",
 items:[
 {
-containsFormID:"92AA49D7-0336-4967-BF04-484860188723",
+containsFormID:"5CE48DBC-FD1F-4B89-8203-0EC52B4187AA",
 location:"10,40",
 name:"footer_desktop",
-text:"footerDesktop",
+text:"baseFooter",
 typeid:15,
 uuid:"533715E5-5C74-4B06-BCA6-2DA3D52006C5"
 }
@@ -81,7 +81,7 @@ typeid:16,
 uuid:"6F5ADCCA-7C60-453E-99A4-F0357BEB7FB6"
 },
 {
-cssPosition:"40,-1,0,0,100%,calc( 100% - 40px)",
+cssPosition:"50,-1,50,-1,100%,-1",
 items:[
 {
 location:"10,40",
