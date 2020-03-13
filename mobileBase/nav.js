@@ -43,6 +43,7 @@ function goHome(event) {
 		scopes.svyNavigation.close(i);
 	})
 	scopes.nav.gotoForm(event, 'homeContainer', 'Main Menu');	
+	gotoSubForm(1);
 }
 
 /**
