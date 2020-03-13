@@ -42,8 +42,9 @@ function goHome(event) {
 	scopes.svyNavigation.getNavigationItems().forEach(function(i) {
 		scopes.svyNavigation.close(i);
 	})
-	scopes.nav.gotoForm(event, 'homeContainer', 'Main Menu');	
-	gotoSubForm(1);
+	scopes.nav.gotoForm(event, 'homeContainer', 'Main Menu');
+	//if we have additional levels for home page, go to first one;
+	if (forms['homeDesktop2'] || forms['homeMobile2']) gotoSubForm(1);
 }
 
 /**
