@@ -66,8 +66,8 @@ function gotoForm(event, formName, title, customData) {
 		item = new scopes.svyNavigation.NavigationItem(formName);
 	}
 	
-	if (title) item.setText(title);
-	scopes.nav.header_title = title;
+	if (title) item.setText(title);	
+	if (title) scopes.nav.header_title = title;
 	if (customData) item.setCustomData(customData);
 	forms.nav.switchContent(formName.split('_level_')[0]);
 	scopes.svyNavigation.open(item);	

@@ -1,10 +1,4 @@
 customProperties:"formComponent:false,\
-methods:{\
-onShowMethodID:{\
-arguments:null,\
-parameters:null\
-}\
-},\
 useCssPosition:true",
 dataSource:"mem:menu",
 extendsID:"DB5448CA-5817-4529-AAE3-B4A316724044",
@@ -37,6 +31,5 @@ uuid:"DCA1C069-A33C-4C61-9F8E-A53054EF6ACE"
 }
 ],
 name:"homeContainer",
-onShowMethodID:"BA421473-EF38-4A71-817E-302D3DD6C977",
 typeid:3,
 uuid:"FFA66A46-F35B-4055-AB7F-1CA78FB1F0B8"
