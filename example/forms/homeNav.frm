@@ -23,22 +23,24 @@ typeid:16,
 uuid:"27CE02A2-BC71-448C-AB32-072C3F30B0AC"
 },
 {
-cssPosition:"40,-1,40,-1,100%,-1",
+cssPosition:"40,-1,0,-1,100%,-1",
 extendsID:"DC674E4F-7137-4580-B9DE-001900DA3685",
 typeid:16,
 uuid:"6523D5BB-DC8C-49F8-9C51-0C1CAADE840A"
 },
 {
-cssPosition:"calc( 100% - 40px),0,0,0,100%,40",
+cssPosition:"calc( 100% - 40px),0,0,0,100%,0",
 extendsID:"0C190844-A532-4913-8434-40D9A9C7F136",
 typeid:16,
-uuid:"D94C7FB8-0457-4197-8CF5-77914E9F298D"
+uuid:"D94C7FB8-0457-4197-8CF5-77914E9F298D",
+visible:false
 },
 {
-cssPosition:"calc( 100% - 40px),0,0,0,100%,40",
+cssPosition:"calc( 100% - 40px),0,0,0,100%,0",
 extendsID:"6F5ADCCA-7C60-453E-99A4-F0357BEB7FB6",
 typeid:16,
-uuid:"E15F6FD5-1530-4ED9-8CD4-6B40ECBF683F"
+uuid:"E15F6FD5-1530-4ED9-8CD4-6B40ECBF683F",
+visible:false
 }
 ],
 name:"homeNav",
