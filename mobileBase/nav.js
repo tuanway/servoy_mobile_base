@@ -5,6 +5,13 @@
  */
 var header_title = '';
 
+/**
+ * @type {String}
+ *
+ * @properties={typeid:35,uuid:"C225EF89-EFC8-4E26-9111-D8651CC33FCB"}
+ */
+var navF = 'nav';
+
 //Add navigation logic here
 
 /**
@@ -14,10 +21,10 @@ var header_title = '';
  */
 function goBack(event) {
 	scopes.svyNavigation.close();
-	var item = scopes.svyNavigation.getCurrentItem();	
+	var item = scopes.svyNavigation.getCurrentItem();
 	var n = item.getFormName();
 	//check to see what level we are at and move down a level if needed.
-	
+
 	if (n.indexOf('_level_') != -1) {
 		var level = n.split('_level_')[1];
 		if (level > 1) {
@@ -25,7 +32,7 @@ function goBack(event) {
 		} else {
 			//navigate back one more time if on level 1
 			scopes.svyNavigation.close();
-			item = scopes.svyNavigation.getCurrentItem();			
+			item = scopes.svyNavigation.getCurrentItem();
 		}
 	}
 	return gotoSubForm(1);
@@ -54,7 +61,7 @@ function goHome(event) {
  * @param {Object} [customData]
  * @properties={typeid:24,uuid:"6B6A0D81-B1A1-45EA-8A16-4EC80E4ACEE1"}
  */
-function gotoForm(event, formName, title, customData) {		
+function gotoForm(event, formName, title, customData) {
 	//check if item exists
 	var item;
 	scopes.svyNavigation.getNavigationItems().forEach(function(i) {
@@ -65,12 +72,12 @@ function gotoForm(event, formName, title, customData) {
 	if (!item) {
 		item = new scopes.svyNavigation.NavigationItem(formName);
 	}
-	
-	if (title) item.setText(title);	
+
+	if (title) item.setText(title);
 	if (title) scopes.nav.header_title = title;
 	if (customData) item.setCustomData(customData);
-	forms.nav.switchContent(formName.split('_level_')[0]);
-	scopes.svyNavigation.open(item);	
+	forms[navF].switchContent(formName.split('_level_')[0]);
+	scopes.svyNavigation.open(item);
 }
 
 /**
@@ -100,7 +107,7 @@ function toggleHeaderButtons(elName) {
 function gotoSubForm(level) {
 
 	//first get current form
-	var f = scopes.svyNavigation.getCurrentItem().getFormName().split('_level_')[0];	
+	var f = scopes.svyNavigation.getCurrentItem().getFormName().split('_level_')[0];
 	if (!forms[f].switchForms) return;
 	forms[f].switchForms(level);
 	//generate navigation item for sub menu
@@ -154,9 +161,9 @@ function addMenuItem(id, title, icon, color, order, parent) {
  */
 function setHeaders(formName, mobile) {
 	if (mobile) {
-		forms.nav.setHeaderMobile(formName);
+		forms[navF].setHeaderMobile(formName);
 	} else {
-		forms.nav.setHeaderDesktop(formName);
+		forms[navF].setHeaderDesktop(formName);
 	}
 }
 
@@ -167,9 +174,9 @@ function setHeaders(formName, mobile) {
  */
 function setFooters(formName, mobile) {
 	if (mobile) {
-		forms.nav.setFooterMobile(formName);
+		forms[navF].setFooterMobile(formName);
 	} else {
-		forms.nav.setFooterDesktop(formName);
+		forms[navF].setFooterDesktop(formName);
 	}
 }
 
@@ -202,19 +209,22 @@ function getCurrentLevel() {
 /**
  * Initializes the module.
  * @public
+ * @param {String} navForm the main navigation form which contains all other elements (usually form extends nav)
  * @SuppressWarnings (unused)
  * @properties={typeid:35,uuid:"16133A46-6977-4CA5-9CBC-20DEF7CA19F4",variableType:-4}
  */
-var init = function() {
+var init = function(navForm) {
 	//setup headers
 	scopes.nav.setHeaders('headerMobile', true);
 	scopes.nav.setHeaders('headerDesktop', false);
-	
+
 	//setup footer
 	scopes.nav.setFooters('footerMobile', true);
 	scopes.nav.setFooters('footerDesktop', false);
-	
-	application.showForm(forms.nav);
+	if (navForm) {
+		navF = navForm;
+	}
+	application.showForm(navF);
 	var po = scopes.svyNavigation.createNavigationPolicies();
 	po.setNavigationPolicy(scopes.svyNavigation.NAVIGATION_POLICY.LINEAR)
 	scopes.svyNavigation.setNavigationPolicies(po);

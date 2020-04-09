@@ -12,15 +12,16 @@
 function onSolutionOpen(arg, queryParams) {
 	//initialize mobile base
 	scopes.mobileBase.onSolutionOpen(arg, queryParams);
-
-	//setup main/sub menu
-	createMenuData();
+	
+	//initialize framework using specific homeNav form.
+	scopes.nav.init('homeNav');		
 
 	//setup headers
 	scopes.nav.setHeaders('headerMobile', true);
 	scopes.nav.setHeaders('headerDesktop', false);
-
-	scopes.nav.init();	
+	
+	//setup main/sub menu
+	createMenuData();
 }
 
 /**
