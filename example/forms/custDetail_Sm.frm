@@ -70,7 +70,7 @@ cssPosition:"410,-1,-1,40%,calc( 60% - 10px),35",
 customProperties:"attributes:{\
 autocomplete:\"off\"\
 }",
-dataProviderID:"test",
+dataProviderID:"phone",
 name:"phone",
 onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 tabSeq:8,

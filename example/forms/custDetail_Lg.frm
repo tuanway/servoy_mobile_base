@@ -5,7 +5,7 @@ extendsID:"D3CCBCB7-BF69-4853-9372-E0117093E784",
 items:[
 {
 cssPosition:"160,-1,-1,634,160,35",
-dataProviderID:"test",
+dataProviderID:"fax",
 extendsID:"DFF1B7EA-1F87-4E3A-874F-F52EDDD48EAF",
 typeid:4,
 uuid:"A6668BBF-BDF0-4F68-A279-130FDE4731B4"

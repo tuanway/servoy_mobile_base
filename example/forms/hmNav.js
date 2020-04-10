@@ -37,6 +37,5 @@ function setTitle(t) {
 function navListener(event) {
 	//set the title when we open a new function or form
 	title = scopes.svyNavigation.getCurrentItem().getText();
-	application.output('opening : ' + title);
 	return _super.navListener(event)
 }
