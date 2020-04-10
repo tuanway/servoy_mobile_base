@@ -129,6 +129,16 @@ function onLoad(event) {
 }
 
 /**
+ * Method is called when form appears, should be overridden
+ * @param event
+ *
+ * @properties={typeid:24,uuid:"97845267-B9F4-40A2-BB2B-AE3A9CEEE7CF"}
+ */
+function onShow(event){
+	
+}
+
+/**
  * @param {String} dataSource
  * @param {Number} action
  * @param {JSDataSet} pks

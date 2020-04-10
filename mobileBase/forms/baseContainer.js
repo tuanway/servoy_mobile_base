@@ -16,18 +16,14 @@ function switchForms(level) {
 	}
 
 	var va = solutionModel.getForm(mF).extendsForm.getVariables();
-	var mcl = scopes.nav.getCurrentLevel().mobile_level == 1 ? '' : scopes.nav.getCurrentLevel().mobile_level
-	var dcl = scopes.nav.getCurrentLevel().desktop_level == 1 ? '' : scopes.nav.getCurrentLevel().desktop_level
+	var mcl = scopes.nav.getCurrentLevel()['mobile_level'] == 1 ? '' : scopes.nav.getCurrentLevel()['mobile_level']
+	var dcl = scopes.nav.getCurrentLevel()['desktop_level'] == 1 ? '' : scopes.nav.getCurrentLevel()['desktop_level']
 
 		//check if form exists for level, if not don't remove current form.
 	//else switch to that form.
 	if (forms[mF + level]) {
 		//if form is on current level then don't remove forms
 		if (level == '' && ! (/\d/.test(elements.mobile.getTabFormNameAt(1)))) {
-			if (solutionModel.getForm(mF + level).onShow && mF != 'homeMobile') {
-				solutionModel.getForm(mF + level).onShow = null;
-				forms[mF + level].controller.recreateUI();
-			}
 			if (forms[mF + level].onShow)
 				forms[mF + level].onShow();
 			return;
@@ -39,10 +35,6 @@ function switchForms(level) {
 		for (var i = 0; i < va.length; i++) {
 			forms[mF + level][va[i].name] = forms[mF + mcl][va[i].name];
 		}
-		if (solutionModel.getForm(mF + level).onShow && mF != 'homeMobile') {
-			solutionModel.getForm(mF + level).onShow = null;
-			forms[mF + level].controller.recreateUI();
-		}
 		if (forms[mF + level].onShow)
 			forms[mF + level].onShow();
 
@@ -51,10 +43,6 @@ function switchForms(level) {
 	if (forms[dF + level]) {
 		//if form is on current level then don't remove forms
 		if (level == '' && ! (/\d/.test(elements.desktop.getTabFormNameAt(1)))) {
-			if (solutionModel.getForm(dF + level).onShow && dF != 'homeDesktop') {
-				solutionModel.getForm(dF + level).onShow = null;
-				forms[dF + level].controller.recreateUI();
-			}
 			if (forms[dF + level].onShow)
 				forms[dF + level].onShow();
 			return;
@@ -62,10 +50,6 @@ function switchForms(level) {
 		//add new navigation object for form
 		elements.desktop.removeAllTabs();
 		elements.desktop.addTab(dF + level);
-		if (solutionModel.getForm(dF + level).onShow && dF != 'homeDesktop') {
-			solutionModel.getForm(dF + level).onShow = null;
-			forms[dF + level].controller.recreateUI();
-		}
 		if (forms[dF + level].onShow)
 			forms[dF + level].onShow();
 		for (i = 0; i < va.length; i++) {
@@ -86,5 +70,5 @@ function switchForms(level) {
  * @properties={typeid:24,uuid:"5B766F61-3715-4892-A9AB-DA2ED7F2A928"}
  */
 function onShow(firstShow, event) {
-	scopes.nav.header_title = scopes.svyNavigation.getCurrentItem()['text']
+//	scopes.nav.header_title = scopes.svyNavigation.getCurrentItem()['text']
 }
