@@ -1,4 +1,14 @@
 /**
+ * Utilize specific naming convention for forms
+ * @properties={typeid:35,uuid:"188BE213-F15B-456D-B9C9-9B9B6AF3EA86",variableType:-4}
+ */
+var NC = {
+	Small: 'Mobile',
+	Large: 'Desktop',
+	Container: 'Container'
+}
+
+/**
  * Callback method for when solution is opened.
  * When deeplinking into solutions, the argument part of the deeplink url will be passed in as the first argument
  * All query parameters + the argument of the deeplink url will be passed in as the second argument
@@ -54,7 +64,7 @@ function gotoForm(event, formName, title, customData) {
 	}
 	if (title) item.setText(title)
 	if (customData) item.setCustomData(customData);
-	forms[navF].switchContent(formName + '_Ctn');
+	forms[navF].switchContent(formName + NC.Container);
 	scopes.svyNavigation.open(item);
 }
 
@@ -98,18 +108,20 @@ function addMenuItem(id, title, icon, color, order, parent) {
  * Initializes the module.
  * @public
  * @param {String} navForm the main navigation form which contains all other elements (usually form extends nav)
+ * @param {Object} nm custom naming convention
  * @SuppressWarnings (unused)
  * @properties={typeid:35,uuid:"16133A46-6977-4CA5-9CBC-20DEF7CA19F4",variableType:-4}
  */
-var init = function(navForm) {
+var init = function(navForm, nm) {
+	NC = nm;
 	//iterate through all forms and see if we need to create any containers
 	var frms = solutionModel.getForms();
 	var fobj = { };
 	for (var i = 0; i < frms.length; i++) {
 		var fn = frms[i].name;
 		if (fn == 'base_Ctn' || fn == 'base_Nav') continue;
-		if (fn.indexOf('_Sm') != -1 || fn.indexOf('_Lg') != -1) {
-			fobj[fn.split('_')[0] + '_Ctn'] = true;
+		if (fn.indexOf(NC.Small) != -1 || fn.indexOf(NC.Large) != -1) {
+			fobj[fn.split('_')[0] + NC.Container] = true;
 		}
 	}
 
@@ -120,8 +132,8 @@ var init = function(navForm) {
 			ct = solutionModel.newForm(i, solutionModel.getForm('base_Ctn'));
 		}
 
-		var _Sm = solutionModel.getForm(i.split('_Ctn')[0] + '_Sm');
-		var _Lg = solutionModel.getForm(i.split('_Ctn')[0] + '_Lg');
+		var _Sm = solutionModel.getForm(i.split(NC.Container)[0] + NC.Small);
+		var _Lg = solutionModel.getForm(i.split(NC.Container)[0] + NC.Large);
 		if (_Sm) ct.getTabPanel('mobile').getTab('mobile').containsForm = _Sm
 		if (_Lg) ct.getTabPanel('desktop').getTab('desktop').containsForm = _Lg
 

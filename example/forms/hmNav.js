@@ -18,15 +18,6 @@ function onLoad(event) {
 	return _super.onLoad(event)
 }
 
-/**
- * TODO generated, please specify type and doc for the params
- * @param t
- *
- * @properties={typeid:24,uuid:"E034BFB7-DFF5-4B0F-8F18-97CCAA7B2266"}
- */
-function setTitle(t) {
-	title = t;
-}
 
 /**
  * @param {JSEvent} event
