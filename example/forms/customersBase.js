@@ -39,28 +39,3 @@ function submit() {
 		plugins.dialogs.showInfoDialog('INFO', 'submission completed');
 	}
 }
-
-/**
- * Callback method for when form is shown.
- *
- * @param {Boolean} firstShow form is shown first time after load
- * @param {JSEvent} event the event that triggered the action
- *
- * @public 
- *
- * @properties={typeid:24,uuid:"346B14B2-CA66-4CFC-999A-84F279481A22"}
- */
-function onShow(firstShow, event) {
-	scopes.nav.header_title = 'Customers';
-}
-/**
- * Perform the element default action.
- *
- * @param {JSEvent} event the event that triggered the action
- *
- * @public 
- *
- * @properties={typeid:24,uuid:"4821B0DA-55EE-43D6-B6A2-DB539E1EA8A9"}
- */
-function onAction$selectCustomer(event) {
-}

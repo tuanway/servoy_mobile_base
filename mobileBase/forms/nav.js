@@ -56,7 +56,7 @@ function setHeaderDesktop(formName) {
  * @param {Boolean} firstShow form is shown first time after load
  * @param {JSEvent} event the event that triggered the action
  *
- * @private
+ * @protected 
  *
  * @properties={typeid:24,uuid:"F52CB5A5-CB1D-40AA-9EF0-5EF73F78DC5D"}
  */

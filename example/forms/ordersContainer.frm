@@ -30,5 +30,6 @@ uuid:"F184AC5F-C119-4387-982A-BE1A7FB1A2B5"
 }
 ],
 name:"ordersContainer",
+titleText:"Orders",
 typeid:3,
 uuid:"8837F623-6AE7-40EE-89BA-3DF0C8A99411"

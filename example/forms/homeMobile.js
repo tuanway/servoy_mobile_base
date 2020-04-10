@@ -9,7 +9,6 @@ function selectMenuItem(event) {
 	loadSubMenu(foundset.getSelectedRecord().menu_id);
 	scopes.nav.toggleHeaderButtons(['home', 'back', 'title']);
 	scopes.nav.gotoSubForm(2);
-	scopes.nav.header_title = menu_title;
 }
 
 /**

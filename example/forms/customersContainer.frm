@@ -32,5 +32,6 @@ uuid:"67D1CFFE-F2C4-4DE7-9172-697804E18406"
 }
 ],
 name:"customersContainer",
+titleText:"Customers",
 typeid:3,
 uuid:"EAB2B538-3F60-48EE-9892-8897885500D5"

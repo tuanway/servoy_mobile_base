@@ -21,7 +21,7 @@ var navF = 'nav';
  */
 function goBack(event) {
 	scopes.svyNavigation.close();
-	var item = scopes.svyNavigation.getCurrentItem();	
+	var item = scopes.svyNavigation.getCurrentItem();
 	var n = item.getFormName();
 	//check to see what level we are at and move down a level if needed.
 
@@ -32,7 +32,7 @@ function goBack(event) {
 		} else {
 			//navigate back one more time if on level 1
 			scopes.svyNavigation.close();
-			item = scopes.svyNavigation.getCurrentItem();			
+			item = scopes.svyNavigation.getCurrentItem();
 		}
 	}
 	return gotoSubForm(1);
@@ -49,7 +49,7 @@ function goHome(event) {
 	scopes.svyNavigation.getNavigationItems().forEach(function(i) {
 		scopes.svyNavigation.close(i);
 	})
-	scopes.nav.gotoForm(event, 'homeContainer', 'Main Menu');
+	scopes.nav.gotoForm(event, 'homeContainer', '');
 	//if we have additional levels for home page, go to first one;
 	if (forms['homeDesktop2'] || forms['homeMobile2']) gotoSubForm(1);
 }
@@ -62,7 +62,7 @@ function goHome(event) {
  * @properties={typeid:24,uuid:"6B6A0D81-B1A1-45EA-8A16-4EC80E4ACEE1"}
  */
 function gotoForm(event, formName, title, customData) {
-	
+
 	//check if item exists
 	var item;
 	scopes.svyNavigation.getNavigationItems().forEach(function(i) {
@@ -72,17 +72,13 @@ function gotoForm(event, formName, title, customData) {
 	})
 	if (!item) {
 		item = new scopes.svyNavigation.NavigationItem(formName);
-	}	
-	
+	}
+
 	if (title) item.setText(title);
 	if (title) scopes.nav.header_title = title;
 	if (customData) item.setCustomData(customData);
 	forms[navF].switchContent(formName.split('_level_')[0]);
 	scopes.svyNavigation.open(item);
-	
-	if(scopes.svyNavigation.getCurrentItem()['text'] && scopes.svyNavigation.getCurrentItem()['text'].indexOf('_level_')==-1) {
-		scopes.nav.header_title = scopes.svyNavigation.getCurrentItem()['text']
-	}
 }
 
 /**

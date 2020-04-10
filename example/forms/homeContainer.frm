@@ -31,5 +31,6 @@ uuid:"DCA1C069-A33C-4C61-9F8E-A53054EF6ACE"
 }
 ],
 name:"homeContainer",
+titleText:"Example",
 typeid:3,
 uuid:"FFA66A46-F35B-4055-AB7F-1CA78FB1F0B8"

@@ -65,9 +65,10 @@ function switchForms(level) {
  * @param {Boolean} firstShow form is shown first time after load
  * @param {JSEvent} event the event that triggered the action
  *
- * @private
+ * @protected
  *
  * @properties={typeid:24,uuid:"5B766F61-3715-4892-A9AB-DA2ED7F2A928"}
  */
 function onShow(firstShow, event) {
+	scopes.nav.header_title = solutionModel.getForm(controller.getName()).titleText;
 }
