@@ -23,25 +23,34 @@
 
 /*Mobile and Desktop specific displays*/
 
-.base_mobile,.footer_mobile,.header_mobile,[ng-style="layout.header_mobile"]
-,[ng-style="layout.footer_mobile"],[ng-style="layout.mobile"] {	
+/* ,.footer_mobile,.header_mobile,[ng-style="layout.header_mobile"]
+,[ng-style="layout.footer_mobile"],.base_mobile, */
+
+[ng-style="layout.mobile"] {	
 	display: none;
 	background-color: @main-bg-color;
 }
 
-[ng-style="layout.header_desktop"],[ng-style="layout.footer_desktop"]
-,[ng-style="layout.desktop"],.base_desktop,.footer_desktop,.header_desktop {
+/* ,.footer_desktop,.header_desktop
+	[ng-style="layout.header_desktop"],[ng-style="layout.footer_desktop"]
+,,.base_desktop
+ */
+[ng-style="layout.desktop"] {
 	display: block;
 	background-color: @main-bg-color;
 }
 
 @media only screen and (max-width: 600px) {
-	[ng-style="layout.header_mobile"],[ng-style="layout.footer_mobile"]
-	,[ng-style="layout.mobile"],.base_mobile,.footer_mobile,.header_mobile {
+	/* [ng-style="layout.header_mobile"],[ng-style="layout.footer_mobile"]
+	,.footer_mobile,.header_mobile
+	, */
+	[ng-style="layout.mobile"],.base_mobile {
 		display: block;
 	}
-	[ng-style="layout.header_desktop"],[ng-style="layout.footer_desktop"]
-	,[ng-style="layout.desktop"],.base_desktop,.footer_desktop,.header_desktop {	
+	/* [ng-style="layout.header_desktop"],[ng-style="layout.footer_desktop"]
+		,.footer_desktop,.header_desktop,
+	 */
+	[ng-style="layout.desktop"],.base_desktop {	
 		display: none;
 	}
 }

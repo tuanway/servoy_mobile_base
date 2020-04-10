@@ -1,0 +1,9 @@
+customProperties:"formComponent:false",
+dataSource:"db:/example_data/orders",
+encapsulation:108,
+extendsID:"949256C2-DB35-4FED-93B4-5CC2E0643090",
+name:"ordBase",
+navigatorID:"-1",
+showInMenu:true,
+typeid:3,
+uuid:"709274D9-38F1-4C83-958D-5DB10B84F470"

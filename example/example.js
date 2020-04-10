@@ -12,16 +12,12 @@
 function onSolutionOpen(arg, queryParams) {
 	//initialize mobile base
 	scopes.mobileBase.onSolutionOpen(arg, queryParams);
-	
-	//initialize framework using specific homeNav form.
-	scopes.nav.init('homeNav');		
 
-	//setup headers
-	scopes.nav.setHeaders('headerMobile', true);
-	scopes.nav.setHeaders('headerDesktop', false);
-	
 	//setup main/sub menu
 	createMenuData();
+
+	//initialize framework using specific homeNav form.
+	scopes.mobileBase.init('hmNav');
 }
 
 /**
@@ -32,22 +28,22 @@ function createMenuData() {
 	f.deleteAllRecords();
 
 	//Add Main Menu
-	scopes.nav.addMenuItem('customers', 'Receiving', 'fa-truck-loading', 'nav-skyblue', 1);
-	scopes.nav.addMenuItem('shipping', 'Shipping', 'fa-shipping-fast', 'nav-green', 3);
-	scopes.nav.addMenuItem('kitting', 'Kitting', 'fa-box-open', 'nav-gray', 3);
-	scopes.nav.addMenuItem('inventory', 'Inventory', 'fa-boxes', 'nav-green', 3);
-	scopes.nav.addMenuItem('labels', 'Labels', 'fa-tags', 'nav-neon', 3);
-	scopes.nav.addMenuItem('picking', 'Picking', 'fa-dolly-flatbed', 'nav-orange', 3);
-	scopes.nav.addMenuItem('rma', 'RMA', 'fa-heart-broken', 'nav-neon', 3);
-	scopes.nav.addMenuItem('move', 'Move', 'fa-dolly', 'nav-skyblue', 3);
-	scopes.nav.addMenuItem('settings', 'Settings', 'fa-cog', 'nav-gray', 3);
+	//first parameter is an ID to specific container.  If you do not create a container, you can still pass
+	//the name of the first portion of the form name as the containers are auto generated.
+	
+	scopes.mobileBase.addMenuItem('custList', 'Customers', 'fa-user', 'nav-skyblue', 1);
+	scopes.mobileBase.addMenuItem('emp', 'Employees', 'fa-shipping-fast', 'nav-green', 3);
+	scopes.mobileBase.addMenuItem('kitting', 'Kitting', 'fa-box-open', 'nav-gray', 3);
+	scopes.mobileBase.addMenuItem('ordList', 'Orders', 'fa-boxes', 'nav-green', 3);
+	scopes.mobileBase.addMenuItem('labels', 'Labels', 'fa-tags', 'nav-neon', 3);
+	scopes.mobileBase.addMenuItem('picking', 'Picking', 'fa-dolly-flatbed', 'nav-orange', 3);
+	scopes.mobileBase.addMenuItem('rma', 'RMA', 'fa-heart-broken', 'nav-neon', 3);
+	scopes.mobileBase.addMenuItem('move', 'Move', 'fa-dolly', 'nav-skyblue', 3);
+	scopes.mobileBase.addMenuItem('settings', 'Settings', 'fa-cog', 'nav-gray', 3);
 
 	//Add Sub Menu for customers
-	scopes.nav.addMenuItem('customersContainer', 'Customers', 'fa-circle', 'nav-skyblue', 1, 'customers');
-	scopes.nav.addMenuItem('ordersContainer', 'Orders', 'fa-circle', 'nav-yellow', 2, 'customers');
-
-	//Add Sub Menu for shipping
-	scopes.nav.addMenuItem('testContainer', 'Test', 'fa-circle', 'nav-skyblue', 1, 'shipping');
+	//	scopes.mobileBase.addMenuItem('custContainer', 'Customers', 'fa-circle', 'nav-skyblue', 1, 'customers');
+	//	scopes.mobileBase.addMenuItem('custContainer', 'Orders', 'fa-circle', 'nav-yellow', 2, 'customers');
 
 	databaseManager.saveData(f);
 }
