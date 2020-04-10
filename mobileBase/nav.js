@@ -80,7 +80,7 @@ function gotoForm(event, formName, title, customData) {
 	forms[navF].switchContent(formName.split('_level_')[0]);
 	scopes.svyNavigation.open(item);
 	
-	if(scopes.svyNavigation.getCurrentItem()['text'] && scopes.svyNavigation.getCurrentItem()['text'].indexOf('homeContainer')==-1) {
+	if(scopes.svyNavigation.getCurrentItem()['text'] && scopes.svyNavigation.getCurrentItem()['text'].indexOf('_level_')==-1) {
 		scopes.nav.header_title = scopes.svyNavigation.getCurrentItem()['text']
 	}
 }
