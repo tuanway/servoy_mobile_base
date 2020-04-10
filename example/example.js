@@ -32,14 +32,14 @@ function createMenuData() {
 	//the name of the first portion of the form name as the containers are auto generated.
 	
 	scopes.mobileBase.addMenuItem('custList', 'Customers', 'fa-user', 'nav-skyblue', 1);
-	scopes.mobileBase.addMenuItem('emp', 'Employees', 'fa-shipping-fast', 'nav-green', 3);
-	scopes.mobileBase.addMenuItem('kitting', 'Kitting', 'fa-box-open', 'nav-gray', 3);
-	scopes.mobileBase.addMenuItem('ordList', 'Orders', 'fa-boxes', 'nav-green', 3);
-	scopes.mobileBase.addMenuItem('labels', 'Labels', 'fa-tags', 'nav-neon', 3);
-	scopes.mobileBase.addMenuItem('picking', 'Picking', 'fa-dolly-flatbed', 'nav-orange', 3);
-	scopes.mobileBase.addMenuItem('rma', 'RMA', 'fa-heart-broken', 'nav-neon', 3);
-	scopes.mobileBase.addMenuItem('move', 'Move', 'fa-dolly', 'nav-skyblue', 3);
-	scopes.mobileBase.addMenuItem('settings', 'Settings', 'fa-cog', 'nav-gray', 3);
+//	scopes.mobileBase.addMenuItem('emp', 'Employees', 'fa-shipping-fast', 'nav-green', 3);
+//	scopes.mobileBase.addMenuItem('prodList', 'Products', 'fa-box-open', 'nav-gray', 3);
+//	scopes.mobileBase.addMenuItem('ordList', 'Orders', 'fa-boxes', 'nav-green', 3);
+//	scopes.mobileBase.addMenuItem('labels', 'Labels', 'fa-tags', 'nav-neon', 3);
+//	scopes.mobileBase.addMenuItem('picking', 'Picking', 'fa-dolly-flatbed', 'nav-orange', 3);
+//	scopes.mobileBase.addMenuItem('rma', 'RMA', 'fa-heart-broken', 'nav-neon', 3);
+//	scopes.mobileBase.addMenuItem('move', 'Move', 'fa-dolly', 'nav-skyblue', 3);
+//	scopes.mobileBase.addMenuItem('settings', 'Settings', 'fa-cog', 'nav-gray', 3);
 
 	//Add Sub Menu for customers
 	//	scopes.mobileBase.addMenuItem('custContainer', 'Customers', 'fa-circle', 'nav-skyblue', 1, 'customers');
