@@ -3,7 +3,7 @@
  *
  * @properties={typeid:35,uuid:"ECFC094F-CA50-4BA1-B583-14A65AC07F36"}
  */
-var title = '';
+var title = 'Main Menu';
 
 /**
  * @param {JSEvent} event
@@ -14,20 +14,18 @@ var title = '';
 function onLoad(event) {
 	// go to hm (home container) form
 	scopes.mobileBase.gotoForm(event, 'hm', 'Main Menu');
-	title = 'Main Menu';
 	return _super.onLoad(event)
 }
 
 /**
- * @param {JSEvent} event
+ * @param {scopes.svyNavigation.NavigationEvent} event
  * @override
  *
  * @properties={typeid:24,uuid:"8C7ED39A-23D0-451B-888D-2EFCCDA9B590"}
  */
 function navListener(event) {
-	//set the title when we open a new function or form
-	title = scopes.svyNavigation.getCurrentItem().getText();
-	return _super.navListener(event)
+	//set the title when we open a new form is opened
+	title = event.getNavigationItem().getText();
 }
 
 /**
