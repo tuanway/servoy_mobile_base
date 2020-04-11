@@ -64,7 +64,7 @@ function gotoForm(event, formName, title, customData) {
 	}
 	if (title) item.setText(title)
 	if (customData) item.setCustomData(customData);
-	forms[navF].switchContent(formName + NC.Container);
+	forms[navF].openForm(formName + NC.Container);
 	scopes.svyNavigation.open(item);
 }
 

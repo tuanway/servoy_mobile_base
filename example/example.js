@@ -27,7 +27,7 @@ function onSolutionOpen(arg, queryParams) {
 	createMenuData();
 
 	//initialize framework using specific homeNav form.
-	scopes.mobileBase.init('hmNav', NC);
+	scopes.mobileBase.init('hmNav', NC);	
 }
 
 /**
