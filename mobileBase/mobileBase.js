@@ -108,7 +108,7 @@ function addMenuItem(id, title, icon, color, order, parent) {
  * Initializes the module.
  * @public
  * @param {String} navForm the main navigation form which contains all other elements (usually form extends nav)
- * @param {Object} nm custom naming convention
+ * @param {{Small:String,Large:String,Container:String}} nm custom naming convention
  * @SuppressWarnings (unused)
  * @properties={typeid:35,uuid:"16133A46-6977-4CA5-9CBC-20DEF7CA19F4",variableType:-4}
  */
