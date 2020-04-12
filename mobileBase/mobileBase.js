@@ -134,8 +134,9 @@ var init = function(navForm, nm) {
 
 		var _Sm = solutionModel.getForm(i.split(NC.Container)[0] + NC.Small);
 		var _Lg = solutionModel.getForm(i.split(NC.Container)[0] + NC.Large);
-		if (_Sm) ct.getTabPanel('mobile').getTab('mobile').containsForm = _Sm
-		if (_Lg) ct.getTabPanel('desktop').getTab('desktop').containsForm = _Lg
+		
+		if (_Sm) ct.getWebComponent('mobile').setJSONProperty('containedForm',_Sm) 
+		if (_Lg) ct.getWebComponent('desktop').setJSONProperty('containedForm',_Lg) 
 
 	}
 
