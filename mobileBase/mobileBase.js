@@ -108,25 +108,31 @@ function addMenuItem(id, title, icon, color, order, parent) {
  * Initializes the module.
  * @public
  * @param {String} navForm the main navigation form which contains all other elements (usually form extends nav)
- * @param {{Small:String,Large:String,Container:String}} nm custom naming convention
+ * @param {{Small:String,Large:String,Container:String}} [nm] custom naming convention
  * @SuppressWarnings (unused)
  * @properties={typeid:35,uuid:"16133A46-6977-4CA5-9CBC-20DEF7CA19F4",variableType:-4}
  */
 var init = function(navForm, nm) {
-	NC = nm;
+	if (nm) {
+		NC = nm;
+	}
 	//iterate through all forms and see if we need to create any containers
 	var frms = solutionModel.getForms();
 	var fobj = { };
 	for (var i = 0; i < frms.length; i++) {
 		var fn = frms[i].name;
 		if (fn == 'base_Ctn' || fn == 'base_Nav') continue;
-		if (fn.indexOf(NC.Small) != -1 || fn.indexOf(NC.Large) != -1) {
-			fobj[fn.split('_')[0] + NC.Container] = true;
+		if (fn.indexOf(NC.Small) != -1) {
+			fobj[fn.split(NC.Small)[0] + NC.Container] = true;
+		}
+		if (fn.indexOf(NC.Large) != -1) {
+			fobj[fn.split(NC.Large)[0] + NC.Container] = true;
 		}
 	}
 
 	//create containers
 	for (i in fobj) {
+		//		application.output(i)
 		var ct = solutionModel.getForm(i)
 		if (!ct) {
 			ct = solutionModel.newForm(i, solutionModel.getForm('base_Ctn'));
@@ -134,9 +140,9 @@ var init = function(navForm, nm) {
 
 		var _Sm = solutionModel.getForm(i.split(NC.Container)[0] + NC.Small);
 		var _Lg = solutionModel.getForm(i.split(NC.Container)[0] + NC.Large);
-		
-		if (_Sm) ct.getWebComponent('mobile').setJSONProperty('containedForm',_Sm) 
-		if (_Lg) ct.getWebComponent('desktop').setJSONProperty('containedForm',_Lg) 
+
+		if (_Sm) ct.getWebComponent('mobile').setJSONProperty('containedForm', _Sm)
+		if (_Lg) ct.getWebComponent('desktop').setJSONProperty('containedForm', _Lg)
 
 	}
 

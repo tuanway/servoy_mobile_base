@@ -90,7 +90,7 @@ uuid:"3F09F7A1-E4C5-4A44-92FF-7BDF46E095F9"
 },
 {
 anchors:14,
-cssPosition:"475,-1,-1,10,calc(100% - 20px),60",
+cssPosition:"453,-1,-1,10,calc(100% - 20px),60",
 name:"submit",
 onActionMethodID:"20BB89FC-3C5C-47CE-ADAE-FF348107FE05",
 onDoubleClickMethodID:"-1",
@@ -149,7 +149,7 @@ typeid:4,
 uuid:"937B2467-E6FF-4BE0-9986-F4DD47EA1FCC"
 },
 {
-height:567,
+height:553,
 partType:5,
 typeid:19,
 uuid:"948447D6-3920-45F6-B9D7-05354FB0927C"
@@ -182,7 +182,7 @@ cssPosition:"210,-1,-1,40%,calc( 60% - 10px),35",
 customProperties:"attributes:{\
 autocomplete:\"off\"\
 }",
-dataProviderID:"contact_name",
+dataProviderID:"contactname",
 name:"contact_name",
 onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 tabSeq:4,
@@ -195,7 +195,7 @@ cssPosition:"260,-1,-1,40%,calc( 60% - 10px),35",
 customProperties:"attributes:{\
 autocomplete:\"off\"\
 }",
-dataProviderID:"contact_title",
+dataProviderID:"contacttitle",
 name:"contact_title",
 onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 tabSeq:5,
@@ -221,7 +221,7 @@ cssPosition:"160,-1,-1,40%,calc( 60% - 10px),35",
 customProperties:"attributes:{\
 autocomplete:\"off\"\
 }",
-dataProviderID:"company_name",
+dataProviderID:"companyname",
 name:"company_name",
 onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 tabSeq:3,
@@ -230,7 +230,7 @@ typeid:4,
 uuid:"FF8D5C92-7ED5-47AA-BA36-681D934AA057"
 }
 ],
-name:"custDetail_Sm",
+name:"customersDetailMobile",
 size:"320,518",
 typeid:3,
 uuid:"E612636D-6801-4A24-B8F4-27E8862A741E"

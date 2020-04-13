@@ -31,7 +31,7 @@ uuid:"0CBF0082-62FC-4C85-B77B-ABE248175E23"
 },
 {
 cssPosition:"10,-1,-1,634,160,35",
-dataProviderID:"contact_name",
+dataProviderID:"contactname",
 name:"contact_name",
 onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 text:"Contact Name",
@@ -40,7 +40,7 @@ uuid:"11564BA2-E2BC-4FF6-8C84-DB336ECA2B52"
 },
 {
 cssPosition:"60,-1,-1,634,160,35",
-dataProviderID:"contact_title",
+dataProviderID:"contacttitle",
 name:"contact_title",
 onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 text:"Contact Title",
@@ -53,7 +53,7 @@ json:{
 containedForm:{
 item:{
 dataProviderID:"customerid",
-onActionMethodID:"F29786E6-FC23-4F69-8676-54A6466F5089"
+onActionMethodID:"4821B0DA-55EE-43D6-B6A2-DB539E1EA8A9"
 },
 svy_form:"36D0FA8B-68CC-4E20-B16F-EA2A8920A83F"
 },
@@ -70,7 +70,7 @@ pageLayout:"listview",
 responsivePageSize:10000
 },
 name:"sub_menu",
-typeName:"servoyextra-listformcomponent",
+typeName:"servoycore-listformcomponent",
 typeid:47,
 uuid:"52B94A3F-1900-444F-99EB-7AAE95D60989"
 },
@@ -167,7 +167,7 @@ uuid:"DFF1B7EA-1F87-4E3A-874F-F52EDDD48EAF"
 },
 {
 cssPosition:"160,-1,-1,321,160,35",
-dataProviderID:"company_name",
+dataProviderID:"companyname",
 name:"company_name",
 onActionMethodID:"E03EF071-205A-4501-BA18-79FABE89EF1B",
 text:"Company Name",
@@ -193,7 +193,7 @@ typeid:4,
 uuid:"FB3754BF-F448-43CC-A3F5-2D74255BCE01"
 }
 ],
-name:"custList_Lg",
+name:"customersDesktop",
 size:"810,480",
 typeid:3,
 uuid:"D3CCBCB7-BF69-4853-9372-E0117093E784"

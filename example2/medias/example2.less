@@ -1,0 +1,91 @@
+@import "mobileBase.less";
+
+/* Custom Theme Variables White Theme*/
+@main-color:#f57900;
+@inactive-color:white;
+@active-color:lightgray;
+@button-color-main:@main-color;
+@button-color-sec:blue;
+@text-color:#2e3436;
+@text-color-active:white;
+@text-color-header:@text-color;
+@validate-text-color-focus:white;
+@main-bg-color:white;
+@validate-bg-color:white;
+@inverse-bg-color:black;
+@header-bg-color:lightgray;
+@footer-bg-color:rgb(34, 34, 34);
+@label-text-size:17px;
+@input-text-size:15px;
+@color-warn:#ef2929;
+@text-shadow:none;
+
+/*  UI Components*/
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none!important;
+}
+
+* {
+	outline: 0px!important;
+}
+
+
+
+/*Misc items*/
+
+.hidden {
+	display:none;
+}
+
+/*Navigation Menu*/
+
+.svy-listformcomponent {
+	overflow:auto!important;
+}
+
+.svy-listformcomponent {
+	z-index:100;
+}
+
+.footer_mobile,.footer_desktop {
+	background-color:@footer-bg-color;
+}
+
+.header_desktop,.header_mobile {
+	background-color:@header-bg-color;
+}
+
+
+/* Eclass room */
+
+.profile_Sm {
+	border-radius: 15px;
+	color:white;
+	background-color:gray;
+}
+
+.hmNavLgSideNav {
+	background-color:lightgray;
+	z-index: 1!important;
+}
+
+.navBaseLgButtonAction {
+	border-radius: 50px;
+	color:white;
+	font-size:30px;
+	background-color:yellowgreen;
+	z-index: 2!important;
+}
+
+
+/* Lessons */
+
+.lesson_item_overlay {
+	z-index: 3!important;
+	border-radius:5px;
+	border:1px solid gray;
+}

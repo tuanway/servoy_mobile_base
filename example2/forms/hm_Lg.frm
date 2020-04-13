@@ -1,0 +1,24 @@
+customProperties:"formComponent:false,\
+useCssPosition:true",
+extendsID:"DCD1BB19-72FA-430B-84F2-FC8263CCCAC2",
+items:[
+{
+cssPosition:"50,0,0,0,calc( 100% - 350px),-1",
+extendsID:"46F135FA-AD2C-4F78-A3A7-42AB5BB94A0F",
+json:{
+cssPosition:{
+bottom:"0",
+height:"-1",
+left:"0",
+right:"0",
+top:"50",
+width:"20"
+}
+},
+typeid:47,
+uuid:"5D072697-F016-4C41-8CED-F6C91365717A"
+}
+],
+name:"hm_Lg",
+typeid:3,
+uuid:"67E35DAB-8EFB-4036-B3A6-4A9AF1A7B308"

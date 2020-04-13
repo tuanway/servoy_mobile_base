@@ -8,16 +8,8 @@ cssPosition:"10,5,15,5,-1,-1",
 json:{
 containedForm:{
 item:{
-cssPosition:{
-bottom:"-1",
-height:"100%",
-left:"0",
-right:"-1",
-top:"1",
-width:"100%"
-},
 dataProviderID:"customerid",
-onActionMethodID:"F29786E6-FC23-4F69-8676-54A6466F5089"
+onActionMethodID:"7D5E0344-C2F4-489D-A897-E99906AC47B3"
 },
 svy_form:"36D0FA8B-68CC-4E20-B16F-EA2A8920A83F"
 },
@@ -34,7 +26,7 @@ pageLayout:"listview",
 responsivePageSize:1000
 },
 name:"sub_menu",
-typeName:"servoyextra-listformcomponent",
+typeName:"servoycore-listformcomponent",
 typeid:47,
 uuid:"4F8E4815-19C2-41FF-8FF1-35CAED67A912"
 },
@@ -45,7 +37,7 @@ typeid:19,
 uuid:"5240C8FA-04FE-495B-9C4C-DB52A0DBE79B"
 }
 ],
-name:"custList_Sm",
+name:"customersMobile",
 size:"320,480",
 typeid:3,
 uuid:"D3C1AE78-EF5F-408F-B881-075546E270E7"

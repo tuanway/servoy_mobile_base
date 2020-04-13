@@ -10,7 +10,7 @@ typeid:19,
 uuid:"9EB9C629-B0BF-4C3B-9977-BD3FE0CA75AE"
 }
 ],
-name:"hm_Lg",
+name:"homeDesktop",
 onShowMethodID:"49E0715B-8D90-42DE-AFCC-E924FFCCBA08",
 showInMenu:true,
 typeid:3,

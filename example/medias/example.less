@@ -9,7 +9,7 @@
 @text-color:#2e3436;
 @text-color-active:white;
 @text-color-header:@text-color;
-@validate-text-color-focus:white;
+@validate-text-color-focus:black;
 @main-bg-color:white;
 @validate-bg-color:white;
 @inverse-bg-color:black;
@@ -19,27 +19,6 @@
 @input-text-size:15px;
 @color-warn:#ef2929;
 @text-shadow:none;
-
-/* Black Theme*/
-/* @main-color:#73d216;
-@inactive-color:rgb(34, 34, 34);
-@active-color:rgb(78, 78, 78);
-@button-color-main:@main-color;
-@button-color-sec:blue;
-@text-color:#fcfcfc;
-@text-color-active:black;
-@text-color-header:@text-color;
-@validate-text-color-focus:@text-color;
-@main-bg-color:rgb(34, 34, 34);
-@validate-bg-color:white;
-@inverse-bg-color:white;
-@header-bg-color:@main-color;
-@footer-bg-color:rgb(34, 34, 34);
-@label-text-size:17px;
-@input-text-size:15px;
-@color-warn:#ef2929;
-@text-shadow:1px 1px black;
-@validate-text-color:black; */
 
 /*Navigation Menu*/
 .mobile_menu_header{
@@ -72,6 +51,7 @@
 }
 
 .nav_button{
+	background-color:transparent;
 	border:none;
 	font-weight:bold;
 	color:@text-color!important;
@@ -155,7 +135,7 @@ button:focus {
 /*Labels and Inputs*/
 
 .header_title{
-	background-color:@main-bg-color;
+	background-color:none;
 	font-weight:bold;
 	font-size: @label-text-size;
 	color:@text-color-header!important;
@@ -179,7 +159,8 @@ button:focus {
 	border:none!important;
 	outline:none!important;
 	box-shadow:none;
-	padding:10px;	
+	padding:10px;
+	overflow: hidden;	
 }
 
 .form-control[disabled],.form-control[readonly],
@@ -241,4 +222,8 @@ button:focus {
 
 .hidden {
 	display:none;
+}
+
+.header {
+	background-color: orange;
 }

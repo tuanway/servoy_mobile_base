@@ -6,7 +6,7 @@
  * @properties={typeid:24,uuid:"F008DF29-F4BE-4D36-83F3-848519AD16FD"}
  */
 function selectMenuItem(event) {
-	scopes.mobileBase.gotoForm(event, menu_id, menu_title);
+	scopes.mobileBase.gotoForm(event,menu_id,menu_title);
 }
 
 /**

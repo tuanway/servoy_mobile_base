@@ -41,19 +41,14 @@ function submit() {
 }
 
 /**
- * @param {JSEvent} event
+ * Perform the element default action.
  *
- * @protected
+ * @param {JSEvent} event the event that triggered the action
  *
- * @properties={typeid:24,uuid:"F29786E6-FC23-4F69-8676-54A6466F5089"}
+ * @public 
+ *
+ * @properties={typeid:24,uuid:"4821B0DA-55EE-43D6-B6A2-DB539E1EA8A9"}
  */
-function openDetailForm(event) {
-	scopes.mobileBase.gotoForm(event, 'custDetail', 'Customer Detail')
+function onAction$selectCustomer(event) {
+	
 }
-
-/**
- * @type {String}
- *
- * @properties={typeid:35,uuid:"6157B2E5-9267-4141-8E0E-C3E64ACD2121"}
- */
-var test = 'ABC';

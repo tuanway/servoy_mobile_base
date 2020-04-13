@@ -40,12 +40,12 @@ pageLayout:"cardview",
 responsivePageSize:10000
 },
 name:"main_menu",
-typeName:"servoyextra-listformcomponent",
+typeName:"servoycore-listformcomponent",
 typeid:47,
 uuid:"5FC426BE-5C6D-42D7-91A9-594253B3E2E2"
 }
 ],
-name:"hm_Sm",
+name:"homeMobile",
 onShowMethodID:"49E0715B-8D90-42DE-AFCC-E924FFCCBA08",
 size:"262,522",
 typeid:3,
