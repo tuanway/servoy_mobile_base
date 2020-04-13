@@ -7,7 +7,6 @@
 function onLoad(event) {
 	elements.content.containedForm = 'hm_Ctn';
 	scopes.example2.currentFunctionTitle = 'Main Menu';
-
 	return _super.onLoad(event)
 }
 

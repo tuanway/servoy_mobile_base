@@ -24,7 +24,7 @@ var currentFunctionTitle = '';
  * @param {String} arg startup argument part of the deeplink url with which the Client was started
  * @param {Object<Array<String>>} queryParams all query parameters of the deeplink url with which the Client was started
  *
- * @properties={typeid:24,uuid:"E86963EC-7A7E-40F3-81D2-FDAD156F2721"}
+ * @properties={typeid:24,uuid:"3791069D-ABFE-4C0C-A3AC-96F186B7E6DB"}
  */
 function onSolutionOpen(arg, queryParams) {
 	//initialize mobile base
